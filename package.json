@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "module": "dist/styled-primitives.esm.js",
   "typings": "dist/index.d.ts",
+  "license": "MIT",
   "files": [
     "dist"
   ],
@@ -13,7 +14,9 @@
     "test": "tsdx test --env=jsdom"
   },
   "peerDependencies": {
-    "react": ">=16.8"
+    "react": ">=16.8",
+    "styled-components": ">=4.0.0",
+    "styled-system": ">=4.0.0"
   },
   "husky": {
     "hooks": {
@@ -39,9 +42,7 @@
     "react-dom": "^16.8.6",
     "tsdx": "^0.7.2",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.2"
-  },
-  "dependencies": {
+    "typescript": "^3.5.2",
     "styled-components": "^4.3.2",
     "styled-system": "^5.0.12"
   }
