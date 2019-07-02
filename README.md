@@ -6,7 +6,7 @@ This library is basicly a implementation of [jxnblk](https://github.com/jxnblk)'
 
 Your styled components theme needs a `breakpoints` and a `grid` property:
 
-```
+```ts
 export const theme: DefaultTheme = {
   breakpoints: ['40em', '52em', '64em', '80em'],
   grid: {
@@ -16,7 +16,7 @@ export const theme: DefaultTheme = {
       padding: [15, null, 30],
     },
   },
-};
+}
 ```
 
 ## Usage
@@ -25,18 +25,12 @@ Read the documentation from rebass for more information about the `Box`, `Flex`,
 
 The grid has 3 components: `Contain`, `Row` and `Column`. Example of grid:
 
-```
+```tsx
 <Contain>
   <Row>
-    <Column col={4}>
-      First column
-    </Column>
-    <Column col={4}>
-      Second column
-    </Column>
-    <Column col={4}>
-      Third column
-    </Column>
+    <Column col={4}>First column</Column>
+    <Column col={4}>Second column</Column>
+    <Column col={4}>Third column</Column>
   </Row>
 
   <Row gutter={40}>
