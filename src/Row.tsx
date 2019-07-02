@@ -55,7 +55,7 @@ export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
   const themeContext = useContext(ThemeContext);
 
   if (!gutter && themeContext && themeContext.grid) {
-    gutter = [themeContext.grid.gutterSmall, null, themeContext.grid.gutter];
+    gutter = themeContext.grid.gutter;
   }
 
   if (!gutter) {

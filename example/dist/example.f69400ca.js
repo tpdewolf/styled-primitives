@@ -34670,29 +34670,26 @@ exports.Contain = void 0;
 
 var tslib_1 = _interopRequireWildcard(require("tslib"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = require("styled-components");
 
-var _styledSystem = require("styled-system");
+var _Box = require("./Box");
+
+var _react = _interopRequireWildcard(require("react"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
-var Contain = _styledComponents.default.div(templateObject_2 || (templateObject_2 = tslib_1.__makeTemplateObject(["\n  max-width: ", "px;\n  margin: 0 auto;\n  padding: 0 ", "px;\n  ", "\n  ", "\n\n  ", "\n"], ["\n  max-width: ", "px;\n  margin: 0 auto;\n  padding: 0 ", "px;\n  ", "\n  ", "\n\n  ", "\n"])), function (_a) {
-  var theme = _a.theme;
-  return theme && theme.grid && theme.grid.container && theme.grid.container.maxWidth || 1280;
-}, function (_a) {
-  var theme = _a.theme;
-  return theme && theme.grid && theme.grid.container && theme.grid.container.padding || 60;
-}, _styledSystem.display, _styledSystem.height, function (_a) {
-  var theme = _a.theme;
-  return theme.breakpoints && theme.breakpoints[1] && (0, _styledComponents.css)(templateObject_1 || (templateObject_1 = tslib_1.__makeTemplateObject(["\n      @media (min-width: ", ") {\n        padding: 0\n          ", "px;\n      }\n    "], ["\n      @media (min-width: ", ") {\n        padding: 0\n          ", "px;\n      }\n    "])), theme.breakpoints[1], function (_a) {
-    var theme = _a.theme;
-    return theme && theme.grid && theme.grid.container && theme.grid.container.paddingSmall || 15;
-  });
-});
+var Contain = function Contain(props) {
+  var themeContext = (0, _react.useContext)(_styledComponents.ThemeContext);
+  console.log(themeContext);
+  return _react.default.createElement(_Box.Box, tslib_1.__assign({
+    margin: "0 auto",
+    padding: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.padding,
+    maxWidth: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.maxWidth
+  }, props));
+};
 
 exports.Contain = Contain;
-var templateObject_1, templateObject_2;
-},{"tslib":"../node_modules/tslib/tslib.es6.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","styled-system":"../node_modules/styled-system/dist/index.esm.js"}],"../src/Flex.tsx":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./Box":"../src/Box.tsx","react":"../node_modules/react/index.js"}],"../src/Flex.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34814,7 +34811,7 @@ var Row = function Row(_a) {
   var themeContext = (0, _react.useContext)(_styledComponents.ThemeContext);
 
   if (!gutter && themeContext && themeContext.grid) {
-    gutter = [themeContext.grid.gutterSmall, null, themeContext.grid.gutter];
+    gutter = themeContext.grid.gutter;
   }
 
   if (!gutter) {
@@ -34963,7 +34960,24 @@ var Heading = function Heading(_a) {
 
 exports.Heading = Heading;
 var templateObject_1;
-},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","styled-system":"../node_modules/styled-system/dist/index.esm.js","./Text":"../src/Text.tsx"}],"index.tsx":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","react":"../node_modules/react/index.js","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","styled-system":"../node_modules/styled-system/dist/index.esm.js","./Text":"../src/Text.tsx"}],"theme.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.grid = {
+  gutter: [15, null, 30],
+  container: {
+    maxWidth: 1280,
+    padding: [15, null, 30]
+  }
+};
+exports.theme = {
+  breakpoints: ['40em', '52em', '64em', '80em'],
+  grid: exports.grid
+};
+},{}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
 var __importStar = this && this.__importStar || function (mod) {
@@ -34998,18 +35012,24 @@ var Heading_1 = require("../src/Heading");
 
 var Text_1 = require("../src/Text");
 
+var styled_components_1 = require("styled-components");
+
+var theme_1 = require("./theme");
+
 var App = function App() {
-  return React.createElement("div", null, React.createElement(Box_1.Box, null, "Hello"), React.createElement(Contain_1.Contain, null, React.createElement(Row_1.Row, null, React.createElement(Column_1.Column, {
+  return React.createElement(styled_components_1.ThemeProvider, {
+    theme: theme_1.theme
+  }, React.createElement(React.Fragment, null, React.createElement(Box_1.Box, null, "Hello"), React.createElement(Contain_1.Contain, null, React.createElement(Row_1.Row, null, React.createElement(Column_1.Column, {
     col: 6
   }, React.createElement(Heading_1.Heading, null, "Hello"), React.createElement(Text_1.Text, null, "Test")), React.createElement(Column_1.Column, {
     col: 6
   }, React.createElement(Heading_1.Heading, {
     color: "red"
-  }, "Hello"), React.createElement(Text_1.Text, null, "Test")))));
+  }, "Hello"), React.createElement(Text_1.Text, null, "Test"))))));
 };
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
-},{"react-app-polyfill/ie11":"node_modules/react-app-polyfill/ie11.js","react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/profiling.js","../src/Box":"../src/Box.tsx","../src/Contain":"../src/Contain.tsx","../src/Row":"../src/Row.tsx","../src/Column":"../src/Column.tsx","../src/Heading":"../src/Heading.tsx","../src/Text":"../src/Text.tsx"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react-app-polyfill/ie11":"node_modules/react-app-polyfill/ie11.js","react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/profiling.js","../src/Box":"../src/Box.tsx","../src/Contain":"../src/Contain.tsx","../src/Row":"../src/Row.tsx","../src/Column":"../src/Column.tsx","../src/Heading":"../src/Heading.tsx","../src/Text":"../src/Text.tsx","styled-components":"../node_modules/styled-components/dist/styled-components.browser.esm.js","./theme":"theme.ts"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -35037,7 +35057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64645" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50431" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

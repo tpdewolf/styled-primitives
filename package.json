@@ -1,8 +1,8 @@
 {
-  "name": "@tpdewolf/styled-system",
+  "name": "@tpdewolf/styled-grid",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "module": "dist/styled-system.esm.js",
+  "module": "dist/styled-grid.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -13,7 +13,7 @@
     "test": "tsdx test --env=jsdom"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16.8"
   },
   "husky": {
     "hooks": {

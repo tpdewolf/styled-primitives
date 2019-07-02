@@ -1,37 +1,31 @@
-import styled, { css } from 'styled-components';
-import { display, DisplayProps, height, HeightProps } from 'styled-system';
+import { ThemeContext } from 'styled-components';
+import { DisplayProps, HeightProps } from 'styled-system';
+import { Box } from './Box';
+import { useContext } from 'react';
+import React from 'react';
 
 type ContainProps = DisplayProps & HeightProps;
 
-export const Contain = styled.div<ContainProps>`
-  max-width: ${({ theme }) =>
-    (theme &&
-      theme.grid &&
-      theme.grid.container &&
-      theme.grid.container.maxWidth) ||
-    1280}px;
-  margin: 0 auto;
-  padding: 0 ${({ theme }) =>
-    (theme &&
-      theme.grid &&
-      theme.grid.container &&
-      theme.grid.container.padding) ||
-    60}px;
-  ${display}
-  ${height}
+export const Contain: React.FC<ContainProps> = props => {
+  const themeContext = useContext(ThemeContext);
+  console.log(themeContext);
 
-  ${({ theme }) =>
-    theme.breakpoints &&
-    theme.breakpoints[1] &&
-    css`
-      @media (min-width: ${theme.breakpoints[1]}) {
-        padding: 0
-          ${({ theme }) =>
-            (theme &&
-              theme.grid &&
-              theme.grid.container &&
-              theme.grid.container.paddingSmall) ||
-            15}px;
+  return (
+    <Box
+      margin="0 auto"
+      padding={
+        themeContext &&
+        themeContext.grid &&
+        themeContext.grid.container &&
+        themeContext.grid.container.padding
       }
-    `}
-`;
+      maxWidth={
+        themeContext &&
+        themeContext.grid &&
+        themeContext.grid.container &&
+        themeContext.grid.container.maxWidth
+      }
+      {...props}
+    />
+  );
+};
