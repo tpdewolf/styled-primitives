@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+  "repository": "github:tpdewolf/styled-primitives",
+  "author": {
+    "name": "Tim de Wolf"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
