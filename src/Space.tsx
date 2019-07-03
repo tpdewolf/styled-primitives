@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { space, SpaceProps } from 'styled-system';
+import React from 'react'
+import styled from 'styled-components'
+import { space, SpaceProps } from 'styled-system'
 
-const classnames = (...args: any[]) => args.join(' ');
-const getClassName = (el: any) => (el.props && el.props.className) || '';
+const classnames = (...args: any[]) => args.join(' ')
+const getClassName = (el: any) => (el.props && el.props.className) || ''
 
 export const StyledChildren: React.FC<{ className?: string } & SpaceProps> = ({
   className,
@@ -13,8 +13,8 @@ export const StyledChildren: React.FC<{ className?: string } & SpaceProps> = ({
     React.cloneElement(child, {
       className: classnames(getClassName(child), className),
     })
-  );
-  return <>{styledChildren}</>;
-};
+  )
+  return <>{styledChildren}</>
+}
 
-export const Space = styled(StyledChildren)(space);
+export const Space = styled(StyledChildren)(space)

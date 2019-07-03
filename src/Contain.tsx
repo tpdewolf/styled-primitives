@@ -1,14 +1,13 @@
-import { ThemeContext } from 'styled-components';
-import { DisplayProps, HeightProps } from 'styled-system';
-import { Box } from './Box';
-import { useContext } from 'react';
-import React from 'react';
+import { ThemeContext } from 'styled-components'
+import { DisplayProps, HeightProps } from 'styled-system'
+import { Box } from './Box'
+import { useContext } from 'react'
+import React from 'react'
 
-type ContainProps = DisplayProps & HeightProps;
+type ContainProps = DisplayProps & HeightProps
 
 export const Contain: React.FC<ContainProps> = props => {
-  const themeContext = useContext(ThemeContext);
-  console.log(themeContext);
+  const themeContext = useContext(ThemeContext)
 
   return (
     <Box
@@ -27,5 +26,5 @@ export const Contain: React.FC<ContainProps> = props => {
       }
       {...props}
     />
-  );
-};
+  )
+}

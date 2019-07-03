@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 import {
   alignItems,
   AlignItemsProps,
@@ -9,17 +9,17 @@ import {
   FlexWrapProps,
   justifyContent,
   JustifyContentProps,
-} from 'styled-system';
+} from 'styled-system'
 
-import { Box, BoxProps } from './Box';
+import { Box, BoxProps } from './Box'
 
 type FlexDoczProps = AlignItemsProps &
   FlexDirectionProps &
   FlexWrapProps &
-  JustifyContentProps;
-export type FlexProps = BoxProps & FlexDoczProps;
+  JustifyContentProps
+export type FlexProps = BoxProps & FlexDoczProps
 
-export const FlexDocz: React.FC<FlexDoczProps> = () => <div />;
+export const FlexDocz: React.FC<FlexDoczProps> = () => <div />
 
 export const Flex = styled(Box)<FlexProps>`
   display: flex;
@@ -27,4 +27,4 @@ export const Flex = styled(Box)<FlexProps>`
   ${flexDirection}
   ${flexWrap}
   ${justifyContent}
-`;
+`

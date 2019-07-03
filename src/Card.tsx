@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
   backgroundImage,
   BackgroundImageProps,
@@ -24,9 +24,9 @@ import {
   BorderTopProps,
   boxShadow,
   BoxShadowProps,
-} from 'styled-system';
+} from 'styled-system'
 
-import { Box } from './Box';
+import { Box } from './Box'
 
 type CardProps = BackgroundImageProps &
   BackgroundPositionProps &
@@ -39,7 +39,7 @@ type CardProps = BackgroundImageProps &
   BorderRadiusProps &
   BorderRightProps &
   BorderTopProps &
-  BoxShadowProps;
+  BoxShadowProps
 
 export const Card = styled(Box)<CardProps>`
   ${backgroundImage}
@@ -54,4 +54,4 @@ export const Card = styled(Box)<CardProps>`
   ${borderRight}
   ${borderTop}
   ${boxShadow}
-`;
+`

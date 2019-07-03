@@ -1,5 +1,5 @@
-import React, { HTMLAttributes } from 'react';
-import styled, { css } from 'styled-components';
+import React, { HTMLAttributes } from 'react'
+import styled, { css } from 'styled-components'
 import {
   fontFamily,
   letterSpacing,
@@ -7,9 +7,9 @@ import {
   lineHeight,
   LineHeightProps,
   TextAlignProps,
-} from 'styled-system';
+} from 'styled-system'
 
-import { Box, BoxProps } from './Box';
+import { Box, BoxProps } from './Box'
 
 type TextDoczProps = LetterSpacingProps &
   LineHeightProps &
@@ -26,17 +26,17 @@ type TextDoczProps = LetterSpacingProps &
       | 'h4'
       | 'h5'
       | 'h6'
-      | 'label';
-    target?: string;
-    singleLine?: boolean;
-  };
+      | 'label'
+    target?: string
+    singleLine?: boolean
+  }
 
 export type TextProps = BoxProps &
   TextDoczProps &
   HTMLAttributes<HTMLParagraphElement> &
-  HTMLAttributes<HTMLLabelElement>;
+  HTMLAttributes<HTMLLabelElement>
 
-export const TextDocz: React.FC<TextDoczProps> = () => <div />;
+export const TextDocz: React.FC<TextDoczProps> = () => <div />
 
 const StyledText = styled(Box)<TextProps>`
   
@@ -53,7 +53,7 @@ const StyledText = styled(Box)<TextProps>`
   ${letterSpacing}
   ${lineHeight}
 
-`;
+`
 
 export const Text: React.FC<TextProps> = ({
   as = 'span',
@@ -63,4 +63,4 @@ export const Text: React.FC<TextProps> = ({
   <StyledText as={as} {...props}>
     {children}
   </StyledText>
-);
+)

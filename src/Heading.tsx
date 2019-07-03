@@ -1,5 +1,5 @@
-import React, { HTMLAttributes } from 'react';
-import styled from 'styled-components';
+import React, { HTMLAttributes } from 'react'
+import styled from 'styled-components'
 import {
   color,
   fontSize,
@@ -7,14 +7,14 @@ import {
   opacity,
   space,
   width,
-} from 'styled-system';
+} from 'styled-system'
 
-import { Text, TextProps } from './Text';
+import { Text, TextProps } from './Text'
 
 export type HeadingProps = TextProps &
   HTMLAttributes<HTMLHeadingElement> & {
-    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  };
+    as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  }
 
 const StyledHeading = styled(Text)<HeadingProps>`
   margin: 0px;
@@ -25,7 +25,7 @@ const StyledHeading = styled(Text)<HeadingProps>`
   ${space}
   ${width}
   ${opacity}
-`;
+`
 
 export const Heading: React.FC<HeadingProps> = ({
   as = 'h2',
@@ -35,4 +35,4 @@ export const Heading: React.FC<HeadingProps> = ({
   <StyledHeading as={as} {...props}>
     {children}
   </StyledHeading>
-);
+)

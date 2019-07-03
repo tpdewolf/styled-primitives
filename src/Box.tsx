@@ -1,5 +1,5 @@
-import React, { HTMLAttributes } from 'react';
-import styled from 'styled-components';
+import React, { HTMLAttributes } from 'react'
+import styled from 'styled-components'
 import {
   background,
   BackgroundProps,
@@ -47,7 +47,7 @@ import {
   WidthProps,
   zIndex,
   ZIndexProps,
-} from 'styled-system';
+} from 'styled-system'
 
 type BoxDoczProps = BackgroundProps &
   BottomProps &
@@ -71,11 +71,11 @@ type BoxDoczProps = BackgroundProps &
   TextAlignProps &
   TopProps &
   WidthProps &
-  ZIndexProps;
+  ZIndexProps
 
-export const BoxDocz: React.FC<BoxDoczProps> = () => <div />;
+export const BoxDocz: React.FC<BoxDoczProps> = () => <div />
 
-export type BoxProps = BoxDoczProps & HTMLAttributes<any>;
+export type BoxProps = BoxDoczProps & HTMLAttributes<any>
 
 export const Box = styled.div<BoxProps>`
   box-sizing: border-box;
@@ -102,4 +102,4 @@ export const Box = styled.div<BoxProps>`
   ${top}
   ${width}
   ${zIndex}
-`;
+`
