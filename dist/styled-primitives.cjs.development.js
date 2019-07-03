@@ -10,121 +10,73 @@ var styled = require('styled-components')
 var styled__default = _interopDefault(styled)
 var styledSystem = require('styled-system')
 
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {}
-  var target = {}
-  var sourceKeys = Object.keys(source)
-  var key, i
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i]
-    if (excluded.indexOf(key) >= 0) continue
-    target[key] = source[key]
-  }
-
-  return target
-}
-
-function _taggedTemplateLiteralLoose(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0)
-  }
-
-  strings.raw = raw
-  return strings
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  box-sizing: border-box;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var BoxDocz = function BoxDocz() {
   return React__default.createElement('div', null)
 }
-var Box = styled__default.div(
-  _templateObject(),
-  styledSystem.background,
-  styledSystem.bottom,
-  styledSystem.color,
-  styledSystem.display,
-  styledSystem.flex,
-  styledSystem.fontSize,
-  styledSystem.fontWeight,
-  styledSystem.height,
-  styledSystem.justifyContent,
-  styledSystem.left,
-  styledSystem.maxHeight,
-  styledSystem.maxWidth,
-  styledSystem.minHeight,
-  styledSystem.minWidth,
-  styledSystem.opacity,
-  styledSystem.order,
-  styledSystem.position,
-  styledSystem.right,
-  styledSystem.space,
-  styledSystem.textAlign,
-  styledSystem.top,
-  styledSystem.width,
-  styledSystem.zIndex
-)
+var Box =
+  /*#__PURE__*/
+  styled__default.div.withConfig({
+    displayName: 'Box',
+    componentId: 'sc-1gug8g6-0',
+  })(
+    [
+      'box-sizing:border-box;',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      '',
+    ],
+    styledSystem.background,
+    styledSystem.bottom,
+    styledSystem.color,
+    styledSystem.display,
+    styledSystem.flex,
+    styledSystem.fontSize,
+    styledSystem.fontWeight,
+    styledSystem.height,
+    styledSystem.justifyContent,
+    styledSystem.left,
+    styledSystem.maxHeight,
+    styledSystem.maxWidth,
+    styledSystem.minHeight,
+    styledSystem.minWidth,
+    styledSystem.opacity,
+    styledSystem.order,
+    styledSystem.position,
+    styledSystem.right,
+    styledSystem.space,
+    styledSystem.textAlign,
+    styledSystem.top,
+    styledSystem.width,
+    styledSystem.zIndex
+  )
 
-function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$1 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var Card =
   /*#__PURE__*/
-  styled__default(Box)(
-    _templateObject$1(),
+  styled__default(Box).withConfig({
+    displayName: 'Card',
+    componentId: 'm4kmxe-0',
+  })(
+    ['', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ''],
     styledSystem.backgroundImage,
     styledSystem.backgroundPosition,
     styledSystem.backgroundRepeat,
@@ -138,16 +90,6 @@ var Card =
     styledSystem.borderTop,
     styledSystem.boxShadow
   )
-
-function _templateObject$2() {
-  var data = _taggedTemplateLiteralLoose(['\n  ', '\n  ', '\n'])
-
-  _templateObject$2 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 
 function transformValue(n) {
   if (!n || isNaN(n)) {
@@ -174,7 +116,10 @@ var col =
   })
 var StyledColumn =
   /*#__PURE__*/
-  styled__default(Box)(_templateObject$2(), col, inset)
+  styled__default(Box).withConfig({
+    displayName: 'Column__StyledColumn',
+    componentId: 'sc-1a1q09k-0',
+  })(['', ' ', ''], col, inset)
 var Column = function Column(props) {
   return React__default.createElement(
     StyledColumn,
@@ -206,70 +151,54 @@ var Contain = function Contain(props) {
   )
 }
 
-function _templateObject$3() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  display: flex;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$3 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var FlexDocz = function FlexDocz() {
   return React__default.createElement('div', null)
 }
 var Flex =
   /*#__PURE__*/
-  styled__default(Box)(
-    _templateObject$3(),
+  styled__default(Box).withConfig({
+    displayName: 'Flex',
+    componentId: 'cxd7w0-0',
+  })(
+    ['display:flex;', ' ', ' ', ' ', ''],
     styledSystem.alignItems,
     styledSystem.flexDirection,
     styledSystem.flexWrap,
     styledSystem.justifyContent
   )
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n    ',
-  ])
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {}
+  var target = {}
+  var sourceKeys = Object.keys(source)
+  var key, i
 
-  _templateObject2 = function _templateObject2() {
-    return data
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i]
+    if (excluded.indexOf(key) >= 0) continue
+    target[key] = source[key]
   }
 
-  return data
+  return target
 }
 
-function _templateObject$4() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  \n  ',
-    '\n\n  ',
-    '\n  ',
-    '\n  ',
-    '\n\n',
-  ])
-
-  _templateObject$4 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var TextDocz = function TextDocz() {
   return React__default.createElement('div', null)
 }
 var StyledText =
   /*#__PURE__*/
-  styled__default(Box)(
-    _templateObject$4(),
+  styled__default(Box).withConfig({
+    displayName: 'Text__StyledText',
+    componentId: 'sc-1avl9pw-0',
+  })(
+    ['', ' ', ' ', ' ', ''],
     function(props) {
-      return props.singleLine && styled.css(_templateObject2())
+      return (
+        props.singleLine &&
+        styled.css([
+          'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+        ])
+      )
     },
     styledSystem.fontFamily,
     styledSystem.letterSpacing,
@@ -293,27 +222,13 @@ var Text = function Text(_ref) {
   )
 }
 
-function _templateObject$5() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  margin: 0px;\n  line-height: 1.2;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$5 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var StyledHeading =
   /*#__PURE__*/
-  styled__default(Text)(
-    _templateObject$5(),
+  styled__default(Text).withConfig({
+    displayName: 'Heading__StyledHeading',
+    componentId: 'sc-1vv0hjt-0',
+  })(
+    ['margin:0px;line-height:1.2;', ' ', ' ', ' ', ' ', ' ', ''],
     styledSystem.color,
     styledSystem.fontSize,
     styledSystem.fontWeight,
@@ -373,22 +288,11 @@ var StyledChildren = function StyledChildren(_ref) {
 }
 var Space =
   /*#__PURE__*/
-  styled__default(StyledChildren)(styledSystem.space)
+  styled__default(StyledChildren).withConfig({
+    displayName: 'Space',
+    componentId: 'aw4q1b-0',
+  })(styledSystem.space)
 
-function _templateObject$6() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  flex-wrap: wrap;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$6 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var gutterLeft =
   /*#__PURE__*/
   styledSystem.style({
@@ -409,8 +313,11 @@ var gutterRight =
   })
 var StyledRow =
   /*#__PURE__*/
-  styled__default(Flex)(
-    _templateObject$6(),
+  styled__default(Flex).withConfig({
+    displayName: 'Row__StyledRow',
+    componentId: 'sc-1j9hqig-0',
+  })(
+    ['flex-wrap:wrap;', ' ', ' ', ''],
     styledSystem.flexWrap,
     gutterLeft,
     gutterRight

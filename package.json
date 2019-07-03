@@ -46,7 +46,7 @@
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2",
     "styled-system": "^5.0.12",
-    "tsdx": "^0.7.2",
+    "tsdx": "https://github.com/tpdewolf/tsdx",
     "tslib": "^1.10.0",
     "typescript": "^3.5.2"
   }

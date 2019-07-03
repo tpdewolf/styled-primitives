@@ -45,121 +45,73 @@ import {
   lineHeight,
 } from 'styled-system'
 
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {}
-  var target = {}
-  var sourceKeys = Object.keys(source)
-  var key, i
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i]
-    if (excluded.indexOf(key) >= 0) continue
-    target[key] = source[key]
-  }
-
-  return target
-}
-
-function _taggedTemplateLiteralLoose(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0)
-  }
-
-  strings.raw = raw
-  return strings
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  box-sizing: border-box;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var BoxDocz = function BoxDocz() {
   return React.createElement('div', null)
 }
-var Box = styled.div(
-  _templateObject(),
-  background,
-  bottom,
-  color,
-  display,
-  flex,
-  fontSize,
-  fontWeight,
-  height,
-  justifyContent,
-  left,
-  maxHeight,
-  maxWidth,
-  minHeight,
-  minWidth,
-  opacity,
-  order,
-  position,
-  right,
-  space,
-  textAlign,
-  top,
-  width,
-  zIndex
-)
+var Box =
+  /*#__PURE__*/
+  styled.div.withConfig({
+    displayName: 'Box',
+    componentId: 'sc-1gug8g6-0',
+  })(
+    [
+      'box-sizing:border-box;',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      ' ',
+      '',
+    ],
+    background,
+    bottom,
+    color,
+    display,
+    flex,
+    fontSize,
+    fontWeight,
+    height,
+    justifyContent,
+    left,
+    maxHeight,
+    maxWidth,
+    minHeight,
+    minWidth,
+    opacity,
+    order,
+    position,
+    right,
+    space,
+    textAlign,
+    top,
+    width,
+    zIndex
+  )
 
-function _templateObject$1() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$1 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var Card =
   /*#__PURE__*/
-  styled(Box)(
-    _templateObject$1(),
+  styled(Box).withConfig({
+    displayName: 'Card',
+    componentId: 'm4kmxe-0',
+  })(
+    ['', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ''],
     backgroundImage,
     backgroundPosition,
     backgroundRepeat,
@@ -173,16 +125,6 @@ var Card =
     borderTop,
     boxShadow
   )
-
-function _templateObject$2() {
-  var data = _taggedTemplateLiteralLoose(['\n  ', '\n  ', '\n'])
-
-  _templateObject$2 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 
 function transformValue(n) {
   if (!n || isNaN(n)) {
@@ -209,7 +151,10 @@ var col =
   })
 var StyledColumn =
   /*#__PURE__*/
-  styled(Box)(_templateObject$2(), col, inset)
+  styled(Box).withConfig({
+    displayName: 'Column__StyledColumn',
+    componentId: 'sc-1a1q09k-0',
+  })(['', ' ', ''], col, inset)
 var Column = function Column(props) {
   return React.createElement(
     StyledColumn,
@@ -241,70 +186,54 @@ var Contain = function Contain(props) {
   )
 }
 
-function _templateObject$3() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  display: flex;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$3 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var FlexDocz = function FlexDocz() {
   return React.createElement('div', null)
 }
 var Flex =
   /*#__PURE__*/
-  styled(Box)(
-    _templateObject$3(),
+  styled(Box).withConfig({
+    displayName: 'Flex',
+    componentId: 'cxd7w0-0',
+  })(
+    ['display:flex;', ' ', ' ', ' ', ''],
     alignItems,
     flexDirection,
     flexWrap,
     justifyContent
   )
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n    ',
-  ])
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {}
+  var target = {}
+  var sourceKeys = Object.keys(source)
+  var key, i
 
-  _templateObject2 = function _templateObject2() {
-    return data
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i]
+    if (excluded.indexOf(key) >= 0) continue
+    target[key] = source[key]
   }
 
-  return data
+  return target
 }
 
-function _templateObject$4() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  \n  ',
-    '\n\n  ',
-    '\n  ',
-    '\n  ',
-    '\n\n',
-  ])
-
-  _templateObject$4 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var TextDocz = function TextDocz() {
   return React.createElement('div', null)
 }
 var StyledText =
   /*#__PURE__*/
-  styled(Box)(
-    _templateObject$4(),
+  styled(Box).withConfig({
+    displayName: 'Text__StyledText',
+    componentId: 'sc-1avl9pw-0',
+  })(
+    ['', ' ', ' ', ' ', ''],
     function(props) {
-      return props.singleLine && css(_templateObject2())
+      return (
+        props.singleLine &&
+        css([
+          'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+        ])
+      )
     },
     fontFamily,
     letterSpacing,
@@ -328,27 +257,13 @@ var Text = function Text(_ref) {
   )
 }
 
-function _templateObject$5() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  margin: 0px;\n  line-height: 1.2;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$5 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var StyledHeading =
   /*#__PURE__*/
-  styled(Text)(
-    _templateObject$5(),
+  styled(Text).withConfig({
+    displayName: 'Heading__StyledHeading',
+    componentId: 'sc-1vv0hjt-0',
+  })(
+    ['margin:0px;line-height:1.2;', ' ', ' ', ' ', ' ', ' ', ''],
     color,
     fontSize,
     fontWeight,
@@ -402,22 +317,11 @@ var StyledChildren = function StyledChildren(_ref) {
 }
 var Space =
   /*#__PURE__*/
-  styled(StyledChildren)(space)
+  styled(StyledChildren).withConfig({
+    displayName: 'Space',
+    componentId: 'aw4q1b-0',
+  })(space)
 
-function _templateObject$6() {
-  var data = _taggedTemplateLiteralLoose([
-    '\n  flex-wrap: wrap;\n  ',
-    '\n  ',
-    '\n  ',
-    '\n',
-  ])
-
-  _templateObject$6 = function _templateObject() {
-    return data
-  }
-
-  return data
-}
 var gutterLeft =
   /*#__PURE__*/
   style({
@@ -438,7 +342,10 @@ var gutterRight =
   })
 var StyledRow =
   /*#__PURE__*/
-  styled(Flex)(_templateObject$6(), flexWrap, gutterLeft, gutterRight)
+  styled(Flex).withConfig({
+    displayName: 'Row__StyledRow',
+    componentId: 'sc-1j9hqig-0',
+  })(['flex-wrap:wrap;', ' ', ' ', ''], flexWrap, gutterLeft, gutterRight)
 var Row = function Row(_ref) {
   var gutter = _ref.gutter,
     children = _ref.children,
