@@ -189,8 +189,8 @@ var Contain = function Contain(props) {
     Box,
     Object.assign(
       {
-        margin: '0 auto',
-        padding:
+        mx: 'auto',
+        px:
           themeContext &&
           themeContext.grid &&
           themeContext.grid.container &&
