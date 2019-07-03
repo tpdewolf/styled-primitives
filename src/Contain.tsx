@@ -11,8 +11,8 @@ export const Contain: React.FC<ContainProps> = props => {
 
   return (
     <Box
-      margin="0 auto"
-      padding={
+      mx="auto"
+      px={
         themeContext &&
         themeContext.grid &&
         themeContext.grid.container &&
