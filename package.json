@@ -1,6 +1,6 @@
 {
   "name": "@tpdewolf/styled-primitives",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "module": "dist/styled-primitives.esm.js",
   "typings": "dist/index.d.ts",
