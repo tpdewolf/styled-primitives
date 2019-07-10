@@ -25,9 +25,7 @@ var Box =
     displayName: 'Box',
     componentId: 'sc-1gug8g6-0',
   })(
-    {
-      boxSizing: 'border-box',
-    },
+    ['box-sizing:border-box;', ''],
     /*#__PURE__*/
     compose(
       background,
