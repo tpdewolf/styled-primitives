@@ -1,14 +1,14 @@
-import 'react-app-polyfill/ie11';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Box } from '../src/Box';
-import { Contain } from '../src/Contain';
-import { Row } from '../src/Row';
-import { Column } from '../src/Column';
-import { Heading } from '../src/Heading';
-import { Text } from '../src/Text';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './theme';
+import 'react-app-polyfill/ie11'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { Box } from '../src/Box'
+import { Contain } from '../src/Contain'
+import { Row } from '../src/Row'
+import { Column } from '../src/Column'
+import { Heading } from '../src/Heading'
+import { Text } from '../src/Text'
+import { ThemeProvider } from 'styled-components'
+import { theme } from './theme'
 
 const App = () => {
   return (
@@ -29,7 +29,7 @@ const App = () => {
         </Contain>
       </>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components'
 
 export const grid = {
   gutter: [15, null, 30],
@@ -6,9 +6,9 @@ export const grid = {
     maxWidth: 1280,
     padding: [15, null, 30],
   },
-};
+}
 
 export const theme: DefaultTheme = {
   breakpoints: ['40em', '52em', '64em', '80em'],
   grid,
-};
+}

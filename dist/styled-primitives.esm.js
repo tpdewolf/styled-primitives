@@ -1,48 +1,19 @@
 import React, { useContext } from 'react'
 import styled, { ThemeContext, css } from 'styled-components'
 import {
+  compose,
   background,
-  bottom,
   color,
-  display,
   flex,
-  fontSize,
-  fontWeight,
-  height,
-  justifyContent,
-  left,
-  maxHeight,
-  maxWidth,
-  minHeight,
-  minWidth,
+  layout,
   opacity,
-  order,
   position,
-  right,
   space,
-  textAlign,
-  top,
-  width,
-  zIndex,
-  backgroundImage,
-  backgroundPosition,
-  backgroundRepeat,
-  backgroundSize,
+  typography,
   border,
-  borderBottom,
-  borderColor,
-  borderLeft,
-  borderRadius,
-  borderRight,
-  borderTop,
-  boxShadow,
+  shadow,
   style,
-  alignItems,
-  flexDirection,
   flexWrap,
-  fontFamily,
-  letterSpacing,
-  lineHeight,
 } from 'styled-system'
 
 var BoxDocz = function BoxDocz() {
@@ -54,55 +25,20 @@ var Box =
     displayName: 'Box',
     componentId: 'sc-1gug8g6-0',
   })(
-    [
-      'box-sizing:border-box;',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      '',
-    ],
-    background,
-    bottom,
-    color,
-    display,
-    flex,
-    fontSize,
-    fontWeight,
-    height,
-    justifyContent,
-    left,
-    maxHeight,
-    maxWidth,
-    minHeight,
-    minWidth,
-    opacity,
-    order,
-    position,
-    right,
-    space,
-    textAlign,
-    top,
-    width,
-    zIndex
+    {
+      boxSizing: 'border-box',
+    },
+    /*#__PURE__*/
+    compose(
+      background,
+      color,
+      flex,
+      layout,
+      opacity,
+      position,
+      space,
+      typography
+    )
   )
 
 var Card =
@@ -111,19 +47,11 @@ var Card =
     displayName: 'Card',
     componentId: 'm4kmxe-0',
   })(
-    ['', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ''],
-    backgroundImage,
-    backgroundPosition,
-    backgroundRepeat,
-    backgroundSize,
-    border,
-    borderBottom,
-    borderColor,
-    borderLeft,
-    borderRadius,
-    borderRight,
-    borderTop,
-    boxShadow
+    /*#__PURE__*/
+    compose(
+      border,
+      shadow
+    )
   )
 
 function transformValue(n) {
@@ -194,13 +122,7 @@ var Flex =
   styled(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(
-    ['display:flex;', ' ', ' ', ' ', ''],
-    alignItems,
-    flexDirection,
-    flexWrap,
-    justifyContent
-  )
+  })(['display:flex;'])
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {}
@@ -225,20 +147,14 @@ var StyledText =
   styled(Box).withConfig({
     displayName: 'Text__StyledText',
     componentId: 'sc-1avl9pw-0',
-  })(
-    ['', ' ', ' ', ' ', ''],
-    function(props) {
-      return (
-        props.singleLine &&
-        css([
-          'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
-        ])
-      )
-    },
-    fontFamily,
-    letterSpacing,
-    lineHeight
-  )
+  })(['', ''], function(props) {
+    return (
+      props.singleLine &&
+      css([
+        'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+      ])
+    )
+  })
 var Text = function Text(_ref) {
   var _ref$as = _ref.as,
     as = _ref$as === void 0 ? 'span' : _ref$as,
@@ -262,15 +178,7 @@ var StyledHeading =
   styled(Text).withConfig({
     displayName: 'Heading__StyledHeading',
     componentId: 'sc-1vv0hjt-0',
-  })(
-    ['margin:0px;line-height:1.2;', ' ', ' ', ' ', ' ', ' ', ''],
-    color,
-    fontSize,
-    fontWeight,
-    space,
-    width,
-    opacity
-  )
+  })(['margin:0px;'])
 var Heading = function Heading(_ref) {
   var _ref$as = _ref.as,
     as = _ref$as === void 0 ? 'h2' : _ref$as,

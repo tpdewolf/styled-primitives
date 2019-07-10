@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { AlignItemsProps, FlexDirectionProps, FlexProps, FlexWrapProps, JustifyContentProps, SpaceProps, WidthProps } from 'styled-system';
+import { FC } from 'react'
+import { FlexProps, SpaceProps, WidthProps } from 'styled-system'
 interface GutterProps {
-    gutter?: any[] | number;
+  gutter?: any[] | number
 }
-declare type RowProps = AlignItemsProps & FlexDirectionProps & FlexProps & FlexWrapProps & GutterProps & JustifyContentProps & SpaceProps & WidthProps;
-export declare const Row: FC<RowProps>;
-export {};
+declare type RowProps = FlexProps & GutterProps & SpaceProps & WidthProps
+export declare const Row: FC<RowProps>
+export {}

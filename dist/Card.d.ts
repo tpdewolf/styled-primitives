@@ -1,3 +1,24 @@
 /// <reference types="react" />
-import { BackgroundImageProps, BackgroundPositionProps, BackgroundRepeatProps, BackgroundSizeProps, BorderBottomProps, BorderColorProps, BorderLeftProps, BorderProps, BorderRadiusProps, BorderRightProps, BorderTopProps, BoxShadowProps } from 'styled-system';
-export declare const Card: import("styled-components").StyledComponent<"div", any, import("styled-system").BackgroundProps<import("styled-system").TLengthStyledSystem> & import("styled-system").BottomProps<import("styled-system").TLengthStyledSystem> & import("styled-system").ColorProps & import("styled-system").DisplayProps & import("styled-system").FlexProps<import("styled-system").TLengthStyledSystem> & import("styled-system").FontSizeProps<import("styled-system").TLengthStyledSystem> & import("styled-system").FontWeightProps & import("styled-system").HeightProps<import("styled-system").TLengthStyledSystem> & import("styled-system").JustifyContentProps & import("styled-system").LeftProps<import("styled-system").TLengthStyledSystem> & import("styled-system").MaxHeightProps<import("styled-system").TLengthStyledSystem> & import("styled-system").MaxWidthProps<import("styled-system").TLengthStyledSystem> & import("styled-system").MinHeightProps<import("styled-system").TLengthStyledSystem> & import("styled-system").MinWidthProps<import("styled-system").TLengthStyledSystem> & import("styled-system").OpacityProps & import("styled-system").OrderProps & import("styled-system").PositionProps & import("styled-system").RightProps<import("styled-system").TLengthStyledSystem> & import("styled-system").SpaceProps<import("styled-system").TLengthStyledSystem> & import("styled-system").TextAlignProps & import("styled-system").TopProps<import("styled-system").TLengthStyledSystem> & import("styled-system").WidthProps<import("styled-system").TLengthStyledSystem> & import("styled-system").ZIndexProps & import("react").HTMLAttributes<any> & BackgroundImageProps & BackgroundPositionProps<import("styled-system").TLengthStyledSystem> & BackgroundRepeatProps & BackgroundSizeProps<import("styled-system").TLengthStyledSystem> & BorderBottomProps<import("styled-system").TLengthStyledSystem> & BorderColorProps & BorderLeftProps<import("styled-system").TLengthStyledSystem> & BorderProps<import("styled-system").TLengthStyledSystem> & BorderRadiusProps<import("styled-system").TLengthStyledSystem> & BorderRightProps<import("styled-system").TLengthStyledSystem> & BorderTopProps<import("styled-system").TLengthStyledSystem> & BoxShadowProps, never>;
+import { BorderProps, ShadowProps } from 'styled-system'
+export declare const Card: import('styled-components').StyledComponent<
+  'div',
+  any,
+  import('styled-system').BackgroundProps<
+    import('styled-system').TLengthStyledSystem
+  > &
+    import('styled-system').ColorProps &
+    import('styled-system').FlexProps<
+      import('styled-system').TLengthStyledSystem
+    > &
+    import('styled-system').LayoutProps &
+    import('styled-system').OpacityProps &
+    import('styled-system').PositionProps &
+    import('styled-system').SpaceProps<
+      import('styled-system').TLengthStyledSystem
+    > &
+    import('styled-system').TypographyProps &
+    import('react').HTMLAttributes<any> &
+    BorderProps<import('styled-system').TLengthStyledSystem> &
+    ShadowProps,
+  never
+>

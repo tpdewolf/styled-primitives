@@ -19,55 +19,20 @@ var Box =
     displayName: 'Box',
     componentId: 'sc-1gug8g6-0',
   })(
-    [
-      'box-sizing:border-box;',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      ' ',
-      '',
-    ],
-    styledSystem.background,
-    styledSystem.bottom,
-    styledSystem.color,
-    styledSystem.display,
-    styledSystem.flex,
-    styledSystem.fontSize,
-    styledSystem.fontWeight,
-    styledSystem.height,
-    styledSystem.justifyContent,
-    styledSystem.left,
-    styledSystem.maxHeight,
-    styledSystem.maxWidth,
-    styledSystem.minHeight,
-    styledSystem.minWidth,
-    styledSystem.opacity,
-    styledSystem.order,
-    styledSystem.position,
-    styledSystem.right,
-    styledSystem.space,
-    styledSystem.textAlign,
-    styledSystem.top,
-    styledSystem.width,
-    styledSystem.zIndex
+    {
+      boxSizing: 'border-box',
+    },
+    /*#__PURE__*/
+    styledSystem.compose(
+      styledSystem.background,
+      styledSystem.color,
+      styledSystem.flex,
+      styledSystem.layout,
+      styledSystem.opacity,
+      styledSystem.position,
+      styledSystem.space,
+      styledSystem.typography
+    )
   )
 
 var Card =
@@ -76,19 +41,11 @@ var Card =
     displayName: 'Card',
     componentId: 'm4kmxe-0',
   })(
-    ['', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ''],
-    styledSystem.backgroundImage,
-    styledSystem.backgroundPosition,
-    styledSystem.backgroundRepeat,
-    styledSystem.backgroundSize,
-    styledSystem.border,
-    styledSystem.borderBottom,
-    styledSystem.borderColor,
-    styledSystem.borderLeft,
-    styledSystem.borderRadius,
-    styledSystem.borderRight,
-    styledSystem.borderTop,
-    styledSystem.boxShadow
+    /*#__PURE__*/
+    styledSystem.compose(
+      styledSystem.border,
+      styledSystem.shadow
+    )
   )
 
 function transformValue(n) {
@@ -159,13 +116,7 @@ var Flex =
   styled__default(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(
-    ['display:flex;', ' ', ' ', ' ', ''],
-    styledSystem.alignItems,
-    styledSystem.flexDirection,
-    styledSystem.flexWrap,
-    styledSystem.justifyContent
-  )
+  })(['display:flex;'])
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {}
@@ -190,20 +141,14 @@ var StyledText =
   styled__default(Box).withConfig({
     displayName: 'Text__StyledText',
     componentId: 'sc-1avl9pw-0',
-  })(
-    ['', ' ', ' ', ' ', ''],
-    function(props) {
-      return (
-        props.singleLine &&
-        styled.css([
-          'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
-        ])
-      )
-    },
-    styledSystem.fontFamily,
-    styledSystem.letterSpacing,
-    styledSystem.lineHeight
-  )
+  })(['', ''], function(props) {
+    return (
+      props.singleLine &&
+      styled.css([
+        'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+      ])
+    )
+  })
 var Text = function Text(_ref) {
   var _ref$as = _ref.as,
     as = _ref$as === void 0 ? 'span' : _ref$as,
@@ -227,15 +172,7 @@ var StyledHeading =
   styled__default(Text).withConfig({
     displayName: 'Heading__StyledHeading',
     componentId: 'sc-1vv0hjt-0',
-  })(
-    ['margin:0px;line-height:1.2;', ' ', ' ', ' ', ' ', ' ', ''],
-    styledSystem.color,
-    styledSystem.fontSize,
-    styledSystem.fontWeight,
-    styledSystem.space,
-    styledSystem.width,
-    styledSystem.opacity
-  )
+  })(['margin:0px;'])
 var Heading = function Heading(_ref) {
   var _ref$as = _ref.as,
     as = _ref$as === void 0 ? 'h2' : _ref$as,
