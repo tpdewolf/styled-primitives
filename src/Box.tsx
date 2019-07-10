@@ -33,11 +33,9 @@ export const BoxDocz: React.FC<BoxDoczProps> = () => <div />
 
 export type BoxProps = BoxDoczProps & HTMLAttributes<any>
 
-export const Box = styled.div<BoxProps>(
-  {
-    boxSizing: 'border-box',
-  },
-  compose(
+export const Box = styled.div<BoxProps>`
+  box-sizing: border-box;
+  ${compose(
     background,
     color,
     flex,
@@ -46,5 +44,5 @@ export const Box = styled.div<BoxProps>(
     position,
     space,
     typography
-  )
-)
+  )}
+`
