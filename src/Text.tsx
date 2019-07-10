@@ -1,35 +1,26 @@
 import React, { HTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
-import {
-  fontFamily,
-  letterSpacing,
-  LetterSpacingProps,
-  lineHeight,
-  LineHeightProps,
-  TextAlignProps,
-} from 'styled-system'
+import { TypographyProps } from 'styled-system'
 
 import { Box, BoxProps } from './Box'
 
-type TextDoczProps = LetterSpacingProps &
-  LineHeightProps &
-  TextAlignProps & {
-    as?:
-      | 'p'
-      | 'small'
-      | 'strong'
-      | 'em'
-      | 'span'
-      | 'h1'
-      | 'h2'
-      | 'h3'
-      | 'h4'
-      | 'h5'
-      | 'h6'
-      | 'label'
-    target?: string
-    singleLine?: boolean
-  }
+type TextDoczProps = TypographyProps & {
+  as?:
+    | 'p'
+    | 'small'
+    | 'strong'
+    | 'em'
+    | 'span'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'label'
+  target?: string
+  singleLine?: boolean
+}
 
 export type TextProps = BoxProps &
   TextDoczProps &
@@ -39,7 +30,6 @@ export type TextProps = BoxProps &
 export const TextDocz: React.FC<TextDoczProps> = () => <div />
 
 const StyledText = styled(Box)<TextProps>`
-  
   ${props =>
     props.singleLine &&
     css`
@@ -48,11 +38,6 @@ const StyledText = styled(Box)<TextProps>`
       overflow: hidden;
       text-overflow: ellipsis;
     `}
-
-  ${fontFamily}
-  ${letterSpacing}
-  ${lineHeight}
-
 `
 
 export const Text: React.FC<TextProps> = ({
