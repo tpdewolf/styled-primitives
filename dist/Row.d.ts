@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { FlexProps, SpaceProps, WidthProps } from 'styled-system'
+import { FlexProps } from './Flex'
 interface GutterProps {
   gutter?: any[] | number
 }
-declare type RowProps = FlexProps & GutterProps & SpaceProps & WidthProps
+declare type RowProps = FlexProps & GutterProps
 export declare const Row: FC<RowProps>
 export {}
