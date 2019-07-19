@@ -1,15 +1,21 @@
 import React, { FC, useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
-import { flexWrap, style } from 'styled-system'
+import {
+  flexWrap,
+  SpaceProps,
+  style,
+  WidthProps,
+  FlexboxProps,
+} from 'styled-system'
 
-import { Flex, FlexProps } from './Flex'
+import { Flex } from './Flex'
 import { Space } from './Space'
 
 interface GutterProps {
   gutter?: any[] | number
 }
 
-type RowProps = FlexProps & GutterProps
+type RowProps = FlexboxProps & GutterProps & SpaceProps & WidthProps
 
 const gutterLeft = style({
   prop: 'gutter',
