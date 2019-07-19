@@ -4,7 +4,7 @@ import {
   compose,
   background,
   color,
-  flex,
+  flexbox,
   layout,
   opacity,
   position,
@@ -13,6 +13,7 @@ import {
   border,
   shadow,
   style,
+  flex,
   flexWrap,
 } from 'styled-system'
 
@@ -30,7 +31,7 @@ var Box =
     compose(
       background,
       color,
-      flex,
+      flexbox,
       layout,
       opacity,
       position,
@@ -120,7 +121,11 @@ var Flex =
   styled(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(['display:flex;'])
+  })(
+    ['display:flex;', ''],
+    /*#__PURE__*/
+    compose(flex)
+  )
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {}

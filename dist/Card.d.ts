@@ -7,9 +7,7 @@ export declare const Card: import('styled-components').StyledComponent<
     import('styled-system').TLengthStyledSystem
   > &
     import('styled-system').ColorProps &
-    import('styled-system').FlexProps<
-      import('styled-system').TLengthStyledSystem
-    > &
+    import('styled-system').FlexboxProps &
     import('styled-system').LayoutProps &
     import('styled-system').OpacityProps &
     import('styled-system').PositionProps &

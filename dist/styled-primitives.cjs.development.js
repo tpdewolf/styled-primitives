@@ -24,7 +24,7 @@ var Box =
     styledSystem.compose(
       styledSystem.background,
       styledSystem.color,
-      styledSystem.flex,
+      styledSystem.flexbox,
       styledSystem.layout,
       styledSystem.opacity,
       styledSystem.position,
@@ -114,7 +114,11 @@ var Flex =
   styled__default(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(['display:flex;'])
+  })(
+    ['display:flex;', ''],
+    /*#__PURE__*/
+    styledSystem.compose(styledSystem.flex)
+  )
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {}

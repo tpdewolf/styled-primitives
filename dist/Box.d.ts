@@ -2,16 +2,16 @@ import React, { HTMLAttributes } from 'react'
 import {
   BackgroundProps,
   ColorProps,
-  FlexProps,
+  FlexboxProps,
+  LayoutProps,
   OpacityProps,
   PositionProps,
   SpaceProps,
-  LayoutProps,
   TypographyProps,
 } from 'styled-system'
 declare type BoxDoczProps = BackgroundProps &
   ColorProps &
-  FlexProps &
+  FlexboxProps &
   LayoutProps &
   OpacityProps &
   PositionProps &
