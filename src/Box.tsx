@@ -5,24 +5,24 @@ import {
   BackgroundProps,
   color,
   ColorProps,
-  flex,
-  FlexProps,
+  compose,
+  flexbox,
+  FlexboxProps,
+  layout,
+  LayoutProps,
   opacity,
   OpacityProps,
   position,
   PositionProps,
   space,
   SpaceProps,
-  layout,
-  LayoutProps,
   typography,
   TypographyProps,
-  compose,
 } from 'styled-system'
 
 type BoxDoczProps = BackgroundProps &
   ColorProps &
-  FlexProps &
+  FlexboxProps &
   LayoutProps &
   OpacityProps &
   PositionProps &
@@ -38,7 +38,7 @@ export const Box = styled.div<BoxProps>`
   ${compose(
     background,
     color,
-    flex,
+    flexbox,
     layout,
     opacity,
     position,
