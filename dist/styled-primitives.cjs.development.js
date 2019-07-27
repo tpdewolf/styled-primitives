@@ -106,20 +106,15 @@ var Contain = function Contain(props) {
 var FlexDocz = function FlexDocz() {
   return React__default.createElement('div', null)
 }
-var flexStyles =
-  /*#__PURE__*/
-  styledSystem.compose(styledSystem.display)
 var Flex =
   /*#__PURE__*/
   styled__default(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(
-    {
-      display: 'flex',
-    },
-    flexStyles
-  )
+  })({})
+Flex.defaultProps = {
+  display: 'flex',
+}
 
 var TextDocz = function TextDocz() {
   return React__default.createElement('div', null)

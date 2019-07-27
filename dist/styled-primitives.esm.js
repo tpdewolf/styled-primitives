@@ -13,7 +13,6 @@ import {
   border,
   shadow,
   style,
-  display,
   flexWrap,
 } from 'styled-system'
 
@@ -113,20 +112,15 @@ var Contain = function Contain(props) {
 var FlexDocz = function FlexDocz() {
   return React.createElement('div', null)
 }
-var flexStyles =
-  /*#__PURE__*/
-  compose(display)
 var Flex =
   /*#__PURE__*/
   styled(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
-  })(
-    {
-      display: 'flex',
-    },
-    flexStyles
-  )
+  })({})
+Flex.defaultProps = {
+  display: 'flex',
+}
 
 var TextDocz = function TextDocz() {
   return React.createElement('div', null)
