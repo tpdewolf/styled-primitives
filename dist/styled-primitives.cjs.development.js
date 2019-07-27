@@ -13,24 +13,28 @@ var styledSystem = require('styled-system')
 var BoxDocz = function BoxDocz() {
   return React__default.createElement('div', null)
 }
+var boxStyles =
+  /*#__PURE__*/
+  styledSystem.compose(
+    styledSystem.background,
+    styledSystem.color,
+    styledSystem.flexbox,
+    styledSystem.layout,
+    styledSystem.opacity,
+    styledSystem.position,
+    styledSystem.space,
+    styledSystem.typography
+  )
 var Box =
   /*#__PURE__*/
   styled__default.div.withConfig({
     displayName: 'Box',
     componentId: 'sc-1gug8g6-0',
   })(
-    ['box-sizing:border-box;', ''],
-    /*#__PURE__*/
-    styledSystem.compose(
-      styledSystem.background,
-      styledSystem.color,
-      styledSystem.flexbox,
-      styledSystem.layout,
-      styledSystem.opacity,
-      styledSystem.position,
-      styledSystem.space,
-      styledSystem.typography
-    )
+    {
+      boxSizing: 'border-box',
+    },
+    boxStyles
   )
 
 var Card =
@@ -69,19 +73,12 @@ var col =
     cssProperty: 'width',
     transformValue: transformValue,
   })
-var StyledColumn =
+var Column =
   /*#__PURE__*/
   styled__default(Box).withConfig({
-    displayName: 'Column__StyledColumn',
+    displayName: 'Column',
     componentId: 'sc-1a1q09k-0',
   })(['', ' ', ''], col, inset)
-var Column = function Column(props) {
-  return React__default.createElement(
-    StyledColumn,
-    Object.assign({}, props),
-    props.children
-  )
-}
 
 var Contain = function Contain(props) {
   var themeContext = React.useContext(styled.ThemeContext)
@@ -109,16 +106,50 @@ var Contain = function Contain(props) {
 var FlexDocz = function FlexDocz() {
   return React__default.createElement('div', null)
 }
+var flexStyles =
+  /*#__PURE__*/
+  styledSystem.compose(styledSystem.display)
 var Flex =
   /*#__PURE__*/
   styled__default(Box).withConfig({
     displayName: 'Flex',
     componentId: 'cxd7w0-0',
   })(
-    ['display:flex;', ''],
-    /*#__PURE__*/
-    styledSystem.compose(styledSystem.flex)
+    {
+      display: 'flex',
+    },
+    flexStyles
   )
+
+var TextDocz = function TextDocz() {
+  return React__default.createElement('div', null)
+}
+var Text =
+  /*#__PURE__*/
+  styled__default(Box).withConfig({
+    displayName: 'Text',
+    componentId: 'sc-1avl9pw-0',
+  })(['', ''], function(props) {
+    return (
+      props.singleLine &&
+      styled.css([
+        'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
+      ])
+    )
+  })
+Text.defaultProps = {
+  as: 'span',
+}
+
+var Heading =
+  /*#__PURE__*/
+  styled__default(Text).withConfig({
+    displayName: 'Heading',
+    componentId: 'sc-1vv0hjt-0',
+  })(['margin:0px;'])
+Heading.defaultProps = {
+  as: 'h2',
+}
 
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {}
@@ -133,64 +164,6 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   }
 
   return target
-}
-
-var TextDocz = function TextDocz() {
-  return React__default.createElement('div', null)
-}
-var StyledText =
-  /*#__PURE__*/
-  styled__default(Box).withConfig({
-    displayName: 'Text__StyledText',
-    componentId: 'sc-1avl9pw-0',
-  })(['', ''], function(props) {
-    return (
-      props.singleLine &&
-      styled.css([
-        'max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',
-      ])
-    )
-  })
-var Text = function Text(_ref) {
-  var _ref$as = _ref.as,
-    as = _ref$as === void 0 ? 'span' : _ref$as,
-    children = _ref.children,
-    props = _objectWithoutPropertiesLoose(_ref, ['as', 'children'])
-
-  return React__default.createElement(
-    StyledText,
-    Object.assign(
-      {
-        as: as,
-      },
-      props
-    ),
-    children
-  )
-}
-
-var StyledHeading =
-  /*#__PURE__*/
-  styled__default(Text).withConfig({
-    displayName: 'Heading__StyledHeading',
-    componentId: 'sc-1vv0hjt-0',
-  })(['margin:0px;'])
-var Heading = function Heading(_ref) {
-  var _ref$as = _ref.as,
-    as = _ref$as === void 0 ? 'h2' : _ref$as,
-    children = _ref.children,
-    props = _objectWithoutPropertiesLoose(_ref, ['as', 'children'])
-
-  return React__default.createElement(
-    StyledHeading,
-    Object.assign(
-      {
-        as: as,
-      },
-      props
-    ),
-    children
-  )
 }
 
 var classnames = function classnames() {

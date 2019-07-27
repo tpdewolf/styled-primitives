@@ -37372,541 +37372,6 @@ object-assign
           '../node_modules/react-dom/cjs/react-dom.development.js',
       },
     ],
-    '../node_modules/tslib/tslib.es6.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.__extends = __extends
-        exports.__rest = __rest
-        exports.__decorate = __decorate
-        exports.__param = __param
-        exports.__metadata = __metadata
-        exports.__awaiter = __awaiter
-        exports.__generator = __generator
-        exports.__exportStar = __exportStar
-        exports.__values = __values
-        exports.__read = __read
-        exports.__spread = __spread
-        exports.__spreadArrays = __spreadArrays
-        exports.__await = __await
-        exports.__asyncGenerator = __asyncGenerator
-        exports.__asyncDelegator = __asyncDelegator
-        exports.__asyncValues = __asyncValues
-        exports.__makeTemplateObject = __makeTemplateObject
-        exports.__importStar = __importStar
-        exports.__importDefault = __importDefault
-        exports.__assign = void 0
-
-        /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-        /* global Reflect, Promise */
-        var extendStatics = function(d, b) {
-          extendStatics =
-            Object.setPrototypeOf ||
-            ({
-              __proto__: [],
-            } instanceof Array &&
-              function(d, b) {
-                d.__proto__ = b
-              }) ||
-            function(d, b) {
-              for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]
-            }
-
-          return extendStatics(d, b)
-        }
-
-        function __extends(d, b) {
-          extendStatics(d, b)
-
-          function __() {
-            this.constructor = d
-          }
-
-          d.prototype =
-            b === null
-              ? Object.create(b)
-              : ((__.prototype = b.prototype), new __())
-        }
-
-        var __assign = function() {
-          exports.__assign = __assign =
-            Object.assign ||
-            function __assign(t) {
-              for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i]
-
-                for (var p in s)
-                  if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p]
-              }
-
-              return t
-            }
-
-          return __assign.apply(this, arguments)
-        }
-
-        exports.__assign = __assign
-
-        function __rest(s, e) {
-          var t = {}
-
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-              t[p] = s[p]
-
-          if (s != null && typeof Object.getOwnPropertySymbols === 'function')
-            for (
-              var i = 0, p = Object.getOwnPropertySymbols(s);
-              i < p.length;
-              i++
-            ) {
-              if (
-                e.indexOf(p[i]) < 0 &&
-                Object.prototype.propertyIsEnumerable.call(s, p[i])
-              )
-                t[p[i]] = s[p[i]]
-            }
-          return t
-        }
-
-        function __decorate(decorators, target, key, desc) {
-          var c = arguments.length,
-            r =
-              c < 3
-                ? target
-                : desc === null
-                ? (desc = Object.getOwnPropertyDescriptor(target, key))
-                : desc,
-            d
-          if (
-            typeof Reflect === 'object' &&
-            typeof Reflect.decorate === 'function'
-          )
-            r = Reflect.decorate(decorators, target, key, desc)
-          else
-            for (var i = decorators.length - 1; i >= 0; i--)
-              if ((d = decorators[i]))
-                r =
-                  (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) ||
-                  r
-          return c > 3 && r && Object.defineProperty(target, key, r), r
-        }
-
-        function __param(paramIndex, decorator) {
-          return function(target, key) {
-            decorator(target, key, paramIndex)
-          }
-        }
-
-        function __metadata(metadataKey, metadataValue) {
-          if (
-            typeof Reflect === 'object' &&
-            typeof Reflect.metadata === 'function'
-          )
-            return Reflect.metadata(metadataKey, metadataValue)
-        }
-
-        function __awaiter(thisArg, _arguments, P, generator) {
-          return new (P || (P = Promise))(function(resolve, reject) {
-            function fulfilled(value) {
-              try {
-                step(generator.next(value))
-              } catch (e) {
-                reject(e)
-              }
-            }
-
-            function rejected(value) {
-              try {
-                step(generator['throw'](value))
-              } catch (e) {
-                reject(e)
-              }
-            }
-
-            function step(result) {
-              result.done
-                ? resolve(result.value)
-                : new P(function(resolve) {
-                    resolve(result.value)
-                  }).then(fulfilled, rejected)
-            }
-
-            step(
-              (generator = generator.apply(thisArg, _arguments || [])).next()
-            )
-          })
-        }
-
-        function __generator(thisArg, body) {
-          var _ = {
-              label: 0,
-              sent: function() {
-                if (t[0] & 1) throw t[1]
-                return t[1]
-              },
-              trys: [],
-              ops: [],
-            },
-            f,
-            y,
-            t,
-            g
-          return (
-            (g = {
-              next: verb(0),
-              throw: verb(1),
-              return: verb(2),
-            }),
-            typeof Symbol === 'function' &&
-              (g[Symbol.iterator] = function() {
-                return this
-              }),
-            g
-          )
-
-          function verb(n) {
-            return function(v) {
-              return step([n, v])
-            }
-          }
-
-          function step(op) {
-            if (f) throw new TypeError('Generator is already executing.')
-
-            while (_)
-              try {
-                if (
-                  ((f = 1),
-                  y &&
-                    (t =
-                      op[0] & 2
-                        ? y['return']
-                        : op[0]
-                        ? y['throw'] || ((t = y['return']) && t.call(y), 0)
-                        : y.next) &&
-                    !(t = t.call(y, op[1])).done)
-                )
-                  return t
-                if (((y = 0), t)) op = [op[0] & 2, t.value]
-
-                switch (op[0]) {
-                  case 0:
-                  case 1:
-                    t = op
-                    break
-
-                  case 4:
-                    _.label++
-                    return {
-                      value: op[1],
-                      done: false,
-                    }
-
-                  case 5:
-                    _.label++
-                    y = op[1]
-                    op = [0]
-                    continue
-
-                  case 7:
-                    op = _.ops.pop()
-
-                    _.trys.pop()
-
-                    continue
-
-                  default:
-                    if (
-                      !((t = _.trys), (t = t.length > 0 && t[t.length - 1])) &&
-                      (op[0] === 6 || op[0] === 2)
-                    ) {
-                      _ = 0
-                      continue
-                    }
-
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
-                      _.label = op[1]
-                      break
-                    }
-
-                    if (op[0] === 6 && _.label < t[1]) {
-                      _.label = t[1]
-                      t = op
-                      break
-                    }
-
-                    if (t && _.label < t[2]) {
-                      _.label = t[2]
-
-                      _.ops.push(op)
-
-                      break
-                    }
-
-                    if (t[2]) _.ops.pop()
-
-                    _.trys.pop()
-
-                    continue
-                }
-
-                op = body.call(thisArg, _)
-              } catch (e) {
-                op = [6, e]
-                y = 0
-              } finally {
-                f = t = 0
-              }
-
-            if (op[0] & 5) throw op[1]
-            return {
-              value: op[0] ? op[1] : void 0,
-              done: true,
-            }
-          }
-        }
-
-        function __exportStar(m, exports) {
-          for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p]
-        }
-
-        function __values(o) {
-          var m = typeof Symbol === 'function' && o[Symbol.iterator],
-            i = 0
-          if (m) return m.call(o)
-          return {
-            next: function() {
-              if (o && i >= o.length) o = void 0
-              return {
-                value: o && o[i++],
-                done: !o,
-              }
-            },
-          }
-        }
-
-        function __read(o, n) {
-          var m = typeof Symbol === 'function' && o[Symbol.iterator]
-          if (!m) return o
-          var i = m.call(o),
-            r,
-            ar = [],
-            e
-
-          try {
-            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-              ar.push(r.value)
-          } catch (error) {
-            e = {
-              error: error,
-            }
-          } finally {
-            try {
-              if (r && !r.done && (m = i['return'])) m.call(i)
-            } finally {
-              if (e) throw e.error
-            }
-          }
-
-          return ar
-        }
-
-        function __spread() {
-          for (var ar = [], i = 0; i < arguments.length; i++)
-            ar = ar.concat(__read(arguments[i]))
-
-          return ar
-        }
-
-        function __spreadArrays() {
-          for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-            s += arguments[i].length
-
-          for (var r = Array(s), k = 0, i = 0; i < il; i++)
-            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-              r[k] = a[j]
-
-          return r
-        }
-
-        function __await(v) {
-          return this instanceof __await ? ((this.v = v), this) : new __await(v)
-        }
-
-        function __asyncGenerator(thisArg, _arguments, generator) {
-          if (!Symbol.asyncIterator)
-            throw new TypeError('Symbol.asyncIterator is not defined.')
-          var g = generator.apply(thisArg, _arguments || []),
-            i,
-            q = []
-          return (
-            (i = {}),
-            verb('next'),
-            verb('throw'),
-            verb('return'),
-            (i[Symbol.asyncIterator] = function() {
-              return this
-            }),
-            i
-          )
-
-          function verb(n) {
-            if (g[n])
-              i[n] = function(v) {
-                return new Promise(function(a, b) {
-                  q.push([n, v, a, b]) > 1 || resume(n, v)
-                })
-              }
-          }
-
-          function resume(n, v) {
-            try {
-              step(g[n](v))
-            } catch (e) {
-              settle(q[0][3], e)
-            }
-          }
-
-          function step(r) {
-            r.value instanceof __await
-              ? Promise.resolve(r.value.v).then(fulfill, reject)
-              : settle(q[0][2], r)
-          }
-
-          function fulfill(value) {
-            resume('next', value)
-          }
-
-          function reject(value) {
-            resume('throw', value)
-          }
-
-          function settle(f, v) {
-            if ((f(v), q.shift(), q.length)) resume(q[0][0], q[0][1])
-          }
-        }
-
-        function __asyncDelegator(o) {
-          var i, p
-          return (
-            (i = {}),
-            verb('next'),
-            verb('throw', function(e) {
-              throw e
-            }),
-            verb('return'),
-            (i[Symbol.iterator] = function() {
-              return this
-            }),
-            i
-          )
-
-          function verb(n, f) {
-            i[n] = o[n]
-              ? function(v) {
-                  return (p = !p)
-                    ? {
-                        value: __await(o[n](v)),
-                        done: n === 'return',
-                      }
-                    : f
-                    ? f(v)
-                    : v
-                }
-              : f
-          }
-        }
-
-        function __asyncValues(o) {
-          if (!Symbol.asyncIterator)
-            throw new TypeError('Symbol.asyncIterator is not defined.')
-          var m = o[Symbol.asyncIterator],
-            i
-          return m
-            ? m.call(o)
-            : ((o =
-                typeof __values === 'function'
-                  ? __values(o)
-                  : o[Symbol.iterator]()),
-              (i = {}),
-              verb('next'),
-              verb('throw'),
-              verb('return'),
-              (i[Symbol.asyncIterator] = function() {
-                return this
-              }),
-              i)
-
-          function verb(n) {
-            i[n] =
-              o[n] &&
-              function(v) {
-                return new Promise(function(resolve, reject) {
-                  ;(v = o[n](v)), settle(resolve, reject, v.done, v.value)
-                })
-              }
-          }
-
-          function settle(resolve, reject, d, v) {
-            Promise.resolve(v).then(function(v) {
-              resolve({
-                value: v,
-                done: d,
-              })
-            }, reject)
-          }
-        }
-
-        function __makeTemplateObject(cooked, raw) {
-          if (Object.defineProperty) {
-            Object.defineProperty(cooked, 'raw', {
-              value: raw,
-            })
-          } else {
-            cooked.raw = raw
-          }
-
-          return cooked
-        }
-
-        function __importStar(mod) {
-          if (mod && mod.__esModule) return mod
-          var result = {}
-          if (mod != null)
-            for (var k in mod)
-              if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k]
-          result.default = mod
-          return result
-        }
-
-        function __importDefault(mod) {
-          return mod && mod.__esModule
-            ? mod
-            : {
-                default: mod,
-              }
-        }
-      },
-      {},
-    ],
     '../node_modules/stylis/stylis.min.js': [
       function(require, module, exports) {
         var define
@@ -44287,6 +43752,22 @@ and limitations under the License.
           parse.config = config
           parse.propNames = Object.keys(config)
           parse.cache = cache
+          var keys = Object.keys(config).filter(function(k) {
+            return k !== 'config'
+          })
+
+          if (keys.length > 1) {
+            keys.forEach(function(key) {
+              var _createParser
+
+              parse[key] = createParser(
+                ((_createParser = {}),
+                (_createParser[key] = config[key]),
+                _createParser)
+              )
+            })
+          }
+
           return parse
         }
 
@@ -44438,6 +43919,392 @@ and limitations under the License.
         exports.compose = compose
       },
       { 'object-assign': '../node_modules/object-assign/index.js' },
+    ],
+    '../node_modules/@styled-system/layout/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.layout = void 0
+
+        var _core = require('@styled-system/core')
+
+        var isNumber = function isNumber(n) {
+          return typeof n === 'number' && !isNaN(n)
+        }
+
+        var getWidth = function getWidth(n, scale) {
+          return (0, _core.get)(
+            scale,
+            n,
+            !isNumber(n) || n > 1 ? n : n * 100 + '%'
+          )
+        }
+
+        var config = {
+          width: {
+            property: 'width',
+            scale: 'sizes',
+            transform: getWidth,
+          },
+          height: {
+            property: 'height',
+            scale: 'sizes',
+          },
+          minWidth: {
+            property: 'minWidth',
+            scale: 'sizes',
+          },
+          minHeight: {
+            property: 'minHeight',
+            scale: 'sizes',
+          },
+          maxWidth: {
+            property: 'maxWidth',
+            scale: 'sizes',
+          },
+          maxHeight: {
+            property: 'maxHeight',
+            scale: 'sizes',
+          },
+          size: {
+            properties: ['width', 'height'],
+            scale: 'sizes',
+          },
+          overflow: true,
+          display: true,
+          verticalAlign: true,
+        }
+        var layout = (0, _core.system)(config)
+        exports.layout = layout
+        var _default = layout
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/color/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.color = void 0
+
+        var _core = require('@styled-system/core')
+
+        var config = {
+          color: {
+            property: 'color',
+            scale: 'colors',
+          },
+          backgroundColor: {
+            property: 'backgroundColor',
+            scale: 'colors',
+          },
+          opacity: true,
+        }
+        config.bg = config.backgroundColor
+        var color = (0, _core.system)(config)
+        exports.color = color
+        var _default = color
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/typography/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.typography = void 0
+
+        var _core = require('@styled-system/core')
+
+        var defaults = {
+          fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
+        }
+        var config = {
+          fontFamily: {
+            property: 'fontFamily',
+            scale: 'fonts',
+          },
+          fontSize: {
+            property: 'fontSize',
+            scale: 'fontSizes',
+            defaultScale: defaults.fontSizes,
+          },
+          fontWeight: {
+            property: 'fontWeight',
+            scale: 'fontWeights',
+          },
+          lineHeight: {
+            property: 'lineHeight',
+            scale: 'lineHeights',
+          },
+          letterSpacing: {
+            property: 'letterSpacing',
+            scale: 'letterSpacings',
+          },
+          textAlign: true,
+          fontStyle: true,
+        }
+        var typography = (0, _core.system)(config)
+        exports.typography = typography
+        var _default = typography
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/flexbox/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.flexbox = void 0
+
+        var _core = require('@styled-system/core')
+
+        var config = {
+          alignItems: true,
+          alignContent: true,
+          justifyItems: true,
+          justifyContent: true,
+          flexWrap: true,
+          flexDirection: true,
+          // item
+          flex: true,
+          flexGrow: true,
+          flexShrink: true,
+          flexBasis: true,
+          justifySelf: true,
+          alignSelf: true,
+          order: true,
+        }
+        var flexbox = (0, _core.system)(config)
+        exports.flexbox = flexbox
+        var _default = flexbox
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/grid/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.grid = void 0
+
+        var _core = require('@styled-system/core')
+
+        var defaults = {
+          space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+        }
+        var config = {
+          gridGap: {
+            property: 'gridGap',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          gridColumnGap: {
+            property: 'gridColumnGap',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          gridRowGap: {
+            property: 'gridRowGap',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          gridColumn: true,
+          gridRow: true,
+          gridAutoFlow: true,
+          gridAutoColumns: true,
+          gridAutoRows: true,
+          gridTemplateColumns: true,
+          gridTemplateRows: true,
+          gridTemplateAreas: true,
+          gridArea: true,
+        }
+        var grid = (0, _core.system)(config)
+        exports.grid = grid
+        var _default = grid
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/border/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.border = void 0
+
+        var _core = require('@styled-system/core')
+
+        var config = {
+          border: {
+            property: 'border',
+            scale: 'borders',
+          },
+          borderWidth: {
+            property: 'borderWidth',
+            scale: 'borderWidths',
+          },
+          borderStyle: {
+            property: 'borderStyle',
+            scale: 'borderStyles',
+          },
+          borderColor: {
+            property: 'borderColor',
+            scale: 'colors',
+          },
+          borderRadius: {
+            property: 'borderRadius',
+            scale: 'radii',
+          },
+          borderTop: {
+            property: 'borderTop',
+            scale: 'borders',
+          },
+          borderRight: {
+            property: 'borderRight',
+            scale: 'borders',
+          },
+          borderBottom: {
+            property: 'borderBottom',
+            scale: 'borders',
+          },
+          borderLeft: {
+            property: 'borderLeft',
+            scale: 'borders',
+          },
+          borderX: {
+            properties: ['borderLeft', 'borderRight'],
+            scale: 'borders',
+          },
+          borderY: {
+            properties: ['borderTop', 'borderBottom'],
+            scale: 'borders',
+          },
+        }
+        var border = (0, _core.system)(config)
+        exports.border = border
+        var _default = border
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/background/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.background = void 0
+
+        var _core = require('@styled-system/core')
+
+        var config = {
+          background: true,
+          backgroundImage: true,
+          backgroundSize: true,
+          backgroundPosition: true,
+          backgroundRepeat: true,
+        }
+        config.bgImage = config.backgroundImage
+        config.bgSize = config.backgroundSize
+        config.bgPosition = config.backgroundPosition
+        config.bgRepeat = config.backgroundRepeat
+        var background = (0, _core.system)(config)
+        exports.background = background
+        var _default = background
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
+    ],
+    '../node_modules/@styled-system/position/dist/index.esm.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.default = exports.position = void 0
+
+        var _core = require('@styled-system/core')
+
+        var defaults = {
+          space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+        }
+        var config = {
+          position: true,
+          zIndex: {
+            property: 'zIndex',
+            scale: 'zIndices',
+          },
+          top: {
+            property: 'top',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          right: {
+            property: 'right',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          bottom: {
+            property: 'bottom',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+          left: {
+            property: 'left',
+            scale: 'space',
+            defaultScale: defaults.space,
+          },
+        }
+        var position = (0, _core.system)(config)
+        exports.position = position
+        var _default = position
+        exports.default = _default
+      },
+      {
+        '@styled-system/core':
+          '../node_modules/@styled-system/core/dist/index.esm.js',
+      },
     ],
     '../node_modules/@styled-system/space/dist/index.esm.js': [
       function(require, module, exports) {
@@ -44606,373 +44473,6 @@ and limitations under the License.
           '../node_modules/@styled-system/core/dist/index.esm.js',
       },
     ],
-    '../node_modules/@styled-system/color/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.color = void 0
-
-        var _core = require('@styled-system/core')
-
-        var config = {
-          color: {
-            property: 'color',
-            scale: 'colors',
-          },
-          backgroundColor: {
-            property: 'backgroundColor',
-            scale: 'colors',
-          },
-          opacity: true,
-        }
-        config.bg = config.backgroundColor
-        var color = (0, _core.system)(config)
-        exports.color = color
-        var _default = color
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/layout/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.layout = void 0
-
-        var _core = require('@styled-system/core')
-
-        var isNumber = function isNumber(n) {
-          return typeof n === 'number' && !isNaN(n)
-        }
-
-        var getWidth = function getWidth(n, scale) {
-          return (0, _core.get)(
-            scale,
-            n,
-            !isNumber(n) || n > 1 ? n : n * 100 + '%'
-          )
-        }
-
-        var config = {
-          width: {
-            property: 'width',
-            scale: 'sizes',
-            transform: getWidth,
-          },
-          height: {
-            property: 'height',
-            scale: 'sizes',
-          },
-          minWidth: {
-            property: 'minWidth',
-            scale: 'sizes',
-          },
-          minHeight: {
-            property: 'minHeight',
-            scale: 'sizes',
-          },
-          maxWidth: {
-            property: 'maxWidth',
-            scale: 'sizes',
-          },
-          maxHeight: {
-            property: 'maxHeight',
-            scale: 'sizes',
-          },
-          size: {
-            properties: ['width', 'height'],
-            scale: 'sizes',
-          },
-          overflow: true,
-          display: true,
-          verticalAlign: true,
-        }
-        var layout = (0, _core.system)(config)
-        exports.layout = layout
-        var _default = layout
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/typography/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.typography = void 0
-
-        var _core = require('@styled-system/core')
-
-        var defaults = {
-          fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
-        }
-        var config = {
-          fontFamily: {
-            property: 'fontFamily',
-            scale: 'fonts',
-          },
-          fontSize: {
-            property: 'fontSize',
-            scale: 'fontSizes',
-            defaultScale: defaults.fontSizes,
-          },
-          fontWeight: {
-            property: 'fontWeight',
-            scale: 'fontWeights',
-          },
-          lineHeight: {
-            property: 'lineHeight',
-            scale: 'lineHeights',
-          },
-          letterSpacing: {
-            property: 'letterSpacing',
-            scale: 'letterSpacings',
-          },
-          textAlign: true,
-          fontStyle: true,
-        }
-        var typography = (0, _core.system)(config)
-        exports.typography = typography
-        var _default = typography
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/flexbox/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.flexbox = void 0
-
-        var _core = require('@styled-system/core')
-
-        var config = {
-          alignItems: true,
-          alignContent: true,
-          justifyItems: true,
-          justifyContent: true,
-          flexWrap: true,
-          flexDirection: true,
-          // item
-          flex: true,
-          flexGrow: true,
-          flexShrink: true,
-          flexBasis: true,
-          justifySelf: true,
-          alignSelf: true,
-          order: true,
-        }
-        var flexbox = (0, _core.system)(config)
-        exports.flexbox = flexbox
-        var _default = flexbox
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/border/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.border = void 0
-
-        var _core = require('@styled-system/core')
-
-        var config = {
-          border: {
-            property: 'border',
-            scale: 'borders',
-          },
-          borderWidth: {
-            property: 'borderWidth',
-            scale: 'borderWidths',
-          },
-          borderStyle: {
-            property: 'borderStyle',
-            scale: 'borderStyles',
-          },
-          borderColor: {
-            property: 'borderColor',
-            scale: 'colors',
-          },
-          borderRadius: {
-            property: 'borderRadius',
-            scale: 'radii',
-          },
-          borderTop: {
-            property: 'borderTop',
-            scale: 'borders',
-          },
-          borderRight: {
-            property: 'borderRight',
-            scale: 'borders',
-          },
-          borderBottom: {
-            property: 'borderBottom',
-            scale: 'borders',
-          },
-          borderLeft: {
-            property: 'borderLeft',
-            scale: 'borders',
-          },
-          borderX: {
-            properties: ['borderLeft', 'borderRight'],
-            scale: 'borders',
-          },
-          borderY: {
-            properties: ['borderTop', 'borderBottom'],
-            scale: 'borders',
-          },
-        }
-        var border = (0, _core.system)(config)
-        exports.border = border
-        var _default = border
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/background/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.background = void 0
-
-        var _core = require('@styled-system/core')
-
-        var config = {
-          background: true,
-          backgroundImage: true,
-          backgroundSize: true,
-          backgroundPosition: true,
-          backgroundRepeat: true,
-        }
-        config.bgImage = config.backgroundImage
-        config.bgSize = config.backgroundSize
-        config.bgPosition = config.backgroundPosition
-        config.bgRepeat = config.backgroundRepeat
-        var background = (0, _core.system)(config)
-        exports.background = background
-        var _default = background
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/position/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.position = void 0
-
-        var _core = require('@styled-system/core')
-
-        var config = {
-          position: true,
-          zIndex: {
-            property: 'zIndex',
-            scale: 'zIndices',
-          },
-          top: true,
-          right: true,
-          bottom: true,
-          left: true,
-        }
-        var position = (0, _core.system)(config)
-        exports.position = position
-        var _default = position
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
-    '../node_modules/@styled-system/grid/dist/index.esm.js': [
-      function(require, module, exports) {
-        'use strict'
-
-        Object.defineProperty(exports, '__esModule', {
-          value: true,
-        })
-        exports.default = exports.grid = void 0
-
-        var _core = require('@styled-system/core')
-
-        var defaults = {
-          space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-        }
-        var config = {
-          gridGap: {
-            property: 'gridGap',
-            scale: 'space',
-            defaultScale: defaults.space,
-          },
-          gridColumnGap: {
-            property: 'gridColumnGap',
-            scale: 'space',
-            defaultScale: defaults.space,
-          },
-          gridRowGap: {
-            property: 'gridRowGap',
-            scale: 'space',
-            defaultScale: defaults.space,
-          },
-          gridColumn: true,
-          gridRow: true,
-          gridAutoFlow: true,
-          gridAutoColumns: true,
-          gridAutoRows: true,
-          gridTemplateColumns: true,
-          gridTemplateRows: true,
-          gridTemplateAreas: true,
-          gridArea: true,
-        }
-        var grid = (0, _core.system)(config)
-        exports.grid = grid
-        var _default = grid
-        exports.default = _default
-      },
-      {
-        '@styled-system/core':
-          '../node_modules/@styled-system/core/dist/index.esm.js',
-      },
-    ],
     '../node_modules/@styled-system/shadow/dist/index.esm.js': [
       function(require, module, exports) {
         'use strict'
@@ -45092,6 +44592,60 @@ and limitations under the License.
             return _core.system
           },
         })
+        Object.defineProperty(exports, 'layout', {
+          enumerable: true,
+          get: function() {
+            return _layout.layout
+          },
+        })
+        Object.defineProperty(exports, 'color', {
+          enumerable: true,
+          get: function() {
+            return _color.color
+          },
+        })
+        Object.defineProperty(exports, 'typography', {
+          enumerable: true,
+          get: function() {
+            return _typography.typography
+          },
+        })
+        Object.defineProperty(exports, 'flexbox', {
+          enumerable: true,
+          get: function() {
+            return _flexbox.flexbox
+          },
+        })
+        Object.defineProperty(exports, 'grid', {
+          enumerable: true,
+          get: function() {
+            return _grid.grid
+          },
+        })
+        Object.defineProperty(exports, 'border', {
+          enumerable: true,
+          get: function() {
+            return _border.border
+          },
+        })
+        Object.defineProperty(exports, 'borders', {
+          enumerable: true,
+          get: function() {
+            return _border.default
+          },
+        })
+        Object.defineProperty(exports, 'background', {
+          enumerable: true,
+          get: function() {
+            return _background.background
+          },
+        })
+        Object.defineProperty(exports, 'position', {
+          enumerable: true,
+          get: function() {
+            return _position.position
+          },
+        })
         Object.defineProperty(exports, 'margin', {
           enumerable: true,
           get: function() {
@@ -45108,420 +44662,6 @@ and limitations under the License.
           enumerable: true,
           get: function() {
             return _space.space
-          },
-        })
-        Object.defineProperty(exports, 'color', {
-          enumerable: true,
-          get: function() {
-            return _color.color
-          },
-        })
-        Object.defineProperty(exports, 'opacity', {
-          enumerable: true,
-          get: function() {
-            return _color.default
-          },
-        })
-        Object.defineProperty(exports, 'layout', {
-          enumerable: true,
-          get: function() {
-            return _layout.layout
-          },
-        })
-        Object.defineProperty(exports, 'width', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'height', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'minWidth', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'minHeight', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'maxWidth', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'maxHeight', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'size', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'verticalAlign', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'display', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'overflow', {
-          enumerable: true,
-          get: function() {
-            return _layout.default
-          },
-        })
-        Object.defineProperty(exports, 'typography', {
-          enumerable: true,
-          get: function() {
-            return _typography.typography
-          },
-        })
-        Object.defineProperty(exports, 'fontSize', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'fontFamily', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'fontWeight', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'lineHeight', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'textAlign', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'fontStyle', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'letterSpacing', {
-          enumerable: true,
-          get: function() {
-            return _typography.default
-          },
-        })
-        Object.defineProperty(exports, 'flexbox', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.flexbox
-          },
-        })
-        Object.defineProperty(exports, 'alignItems', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'alignContent', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'justifyItems', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'justifyContent', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flexWrap', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flexDirection', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flex', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flexGrow', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flexShrink', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'flexBasis', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'justifySelf', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'alignSelf', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'order', {
-          enumerable: true,
-          get: function() {
-            return _flexbox.default
-          },
-        })
-        Object.defineProperty(exports, 'border', {
-          enumerable: true,
-          get: function() {
-            return _border.border
-          },
-        })
-        Object.defineProperty(exports, 'borderWidth', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderStyle', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderColor', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderTop', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderRight', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderBottom', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderLeft', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borderRadius', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'borders', {
-          enumerable: true,
-          get: function() {
-            return _border.default
-          },
-        })
-        Object.defineProperty(exports, 'background', {
-          enumerable: true,
-          get: function() {
-            return _background.background
-          },
-        })
-        Object.defineProperty(exports, 'backgroundImage', {
-          enumerable: true,
-          get: function() {
-            return _background.default
-          },
-        })
-        Object.defineProperty(exports, 'backgroundSize', {
-          enumerable: true,
-          get: function() {
-            return _background.default
-          },
-        })
-        Object.defineProperty(exports, 'backgroundPosition', {
-          enumerable: true,
-          get: function() {
-            return _background.default
-          },
-        })
-        Object.defineProperty(exports, 'backgroundRepeat', {
-          enumerable: true,
-          get: function() {
-            return _background.default
-          },
-        })
-        Object.defineProperty(exports, 'position', {
-          enumerable: true,
-          get: function() {
-            return _position.position
-          },
-        })
-        Object.defineProperty(exports, 'zIndex', {
-          enumerable: true,
-          get: function() {
-            return _position.default
-          },
-        })
-        Object.defineProperty(exports, 'top', {
-          enumerable: true,
-          get: function() {
-            return _position.default
-          },
-        })
-        Object.defineProperty(exports, 'right', {
-          enumerable: true,
-          get: function() {
-            return _position.default
-          },
-        })
-        Object.defineProperty(exports, 'bottom', {
-          enumerable: true,
-          get: function() {
-            return _position.default
-          },
-        })
-        Object.defineProperty(exports, 'left', {
-          enumerable: true,
-          get: function() {
-            return _position.default
-          },
-        })
-        Object.defineProperty(exports, 'grid', {
-          enumerable: true,
-          get: function() {
-            return _grid.grid
-          },
-        })
-        Object.defineProperty(exports, 'gridGap', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridColumnGap', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridRowGap', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridColumn', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridRow', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridAutoFlow', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridAutoColumns', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridAutoRows', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridTemplateColumns', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridTemplateRows', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridTemplateAreas', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
-          },
-        })
-        Object.defineProperty(exports, 'gridArea', {
-          enumerable: true,
-          get: function() {
-            return _grid.default
           },
         })
         Object.defineProperty(exports, 'shadow', {
@@ -45566,15 +44706,13 @@ and limitations under the License.
             return _variant.colorStyle
           },
         })
-        exports.style = void 0
+        exports.style = exports.left = exports.bottom = exports.right = exports.top = exports.zIndex = exports.backgroundRepeat = exports.backgroundPosition = exports.backgroundSize = exports.backgroundImage = exports.borderRadius = exports.borderLeft = exports.borderBottom = exports.borderRight = exports.borderTop = exports.borderColor = exports.borderStyle = exports.borderWidth = exports.gridArea = exports.gridTemplateAreas = exports.gridTemplateRows = exports.gridTemplateColumns = exports.gridAutoRows = exports.gridAutoColumns = exports.gridAutoFlow = exports.gridRow = exports.gridColumn = exports.gridRowGap = exports.gridColumnGap = exports.gridGap = exports.order = exports.alignSelf = exports.justifySelf = exports.flexBasis = exports.flexShrink = exports.flexGrow = exports.flex = exports.flexDirection = exports.flexWrap = exports.justifyContent = exports.justifyItems = exports.alignContent = exports.alignItems = exports.letterSpacing = exports.fontStyle = exports.textAlign = exports.lineHeight = exports.fontWeight = exports.fontFamily = exports.fontSize = exports.opacity = exports.overflow = exports.display = exports.verticalAlign = exports.size = exports.maxHeight = exports.maxWidth = exports.minHeight = exports.minWidth = exports.height = exports.width = void 0
 
         var _core = require('@styled-system/core')
 
-        var _space = require('@styled-system/space')
+        var _layout = _interopRequireWildcard(require('@styled-system/layout'))
 
         var _color = _interopRequireWildcard(require('@styled-system/color'))
-
-        var _layout = _interopRequireWildcard(require('@styled-system/layout'))
 
         var _typography = _interopRequireWildcard(
           require('@styled-system/typography')
@@ -45583,6 +44721,8 @@ and limitations under the License.
         var _flexbox = _interopRequireWildcard(
           require('@styled-system/flexbox')
         )
+
+        var _grid = _interopRequireWildcard(require('@styled-system/grid'))
 
         var _border = _interopRequireWildcard(require('@styled-system/border'))
 
@@ -45594,7 +44734,7 @@ and limitations under the License.
           require('@styled-system/position')
         )
 
-        var _grid = _interopRequireWildcard(require('@styled-system/grid'))
+        var _space = require('@styled-system/space')
 
         var _shadow = _interopRequireWildcard(require('@styled-system/shadow'))
 
@@ -45626,6 +44766,127 @@ and limitations under the License.
         }
 
         // v4 api shims
+        var width = _layout.default.width,
+          height = _layout.default.height,
+          minWidth = _layout.default.minWidth,
+          minHeight = _layout.default.minHeight,
+          maxWidth = _layout.default.maxWidth,
+          maxHeight = _layout.default.maxHeight,
+          size = _layout.default.size,
+          verticalAlign = _layout.default.verticalAlign,
+          display = _layout.default.display,
+          overflow = _layout.default.overflow
+        exports.overflow = overflow
+        exports.display = display
+        exports.verticalAlign = verticalAlign
+        exports.size = size
+        exports.maxHeight = maxHeight
+        exports.maxWidth = maxWidth
+        exports.minHeight = minHeight
+        exports.minWidth = minWidth
+        exports.height = height
+        exports.width = width
+        var opacity = _color.default.opacity
+        exports.opacity = opacity
+        var fontSize = _typography.default.fontSize,
+          fontFamily = _typography.default.fontFamily,
+          fontWeight = _typography.default.fontWeight,
+          lineHeight = _typography.default.lineHeight,
+          textAlign = _typography.default.textAlign,
+          fontStyle = _typography.default.fontStyle,
+          letterSpacing = _typography.default.letterSpacing
+        exports.letterSpacing = letterSpacing
+        exports.fontStyle = fontStyle
+        exports.textAlign = textAlign
+        exports.lineHeight = lineHeight
+        exports.fontWeight = fontWeight
+        exports.fontFamily = fontFamily
+        exports.fontSize = fontSize
+        var alignItems = _flexbox.default.alignItems,
+          alignContent = _flexbox.default.alignContent,
+          justifyItems = _flexbox.default.justifyItems,
+          justifyContent = _flexbox.default.justifyContent,
+          flexWrap = _flexbox.default.flexWrap,
+          flexDirection = _flexbox.default.flexDirection,
+          flex = _flexbox.default.flex,
+          flexGrow = _flexbox.default.flexGrow,
+          flexShrink = _flexbox.default.flexShrink,
+          flexBasis = _flexbox.default.flexBasis,
+          justifySelf = _flexbox.default.justifySelf,
+          alignSelf = _flexbox.default.alignSelf,
+          order = _flexbox.default.order
+        exports.order = order
+        exports.alignSelf = alignSelf
+        exports.justifySelf = justifySelf
+        exports.flexBasis = flexBasis
+        exports.flexShrink = flexShrink
+        exports.flexGrow = flexGrow
+        exports.flex = flex
+        exports.flexDirection = flexDirection
+        exports.flexWrap = flexWrap
+        exports.justifyContent = justifyContent
+        exports.justifyItems = justifyItems
+        exports.alignContent = alignContent
+        exports.alignItems = alignItems
+        var gridGap = _grid.default.gridGap,
+          gridColumnGap = _grid.default.gridColumnGap,
+          gridRowGap = _grid.default.gridRowGap,
+          gridColumn = _grid.default.gridColumn,
+          gridRow = _grid.default.gridRow,
+          gridAutoFlow = _grid.default.gridAutoFlow,
+          gridAutoColumns = _grid.default.gridAutoColumns,
+          gridAutoRows = _grid.default.gridAutoRows,
+          gridTemplateColumns = _grid.default.gridTemplateColumns,
+          gridTemplateRows = _grid.default.gridTemplateRows,
+          gridTemplateAreas = _grid.default.gridTemplateAreas,
+          gridArea = _grid.default.gridArea
+        exports.gridArea = gridArea
+        exports.gridTemplateAreas = gridTemplateAreas
+        exports.gridTemplateRows = gridTemplateRows
+        exports.gridTemplateColumns = gridTemplateColumns
+        exports.gridAutoRows = gridAutoRows
+        exports.gridAutoColumns = gridAutoColumns
+        exports.gridAutoFlow = gridAutoFlow
+        exports.gridRow = gridRow
+        exports.gridColumn = gridColumn
+        exports.gridRowGap = gridRowGap
+        exports.gridColumnGap = gridColumnGap
+        exports.gridGap = gridGap
+        var borderWidth = _border.default.borderWidth,
+          borderStyle = _border.default.borderStyle,
+          borderColor = _border.default.borderColor,
+          borderTop = _border.default.borderTop,
+          borderRight = _border.default.borderRight,
+          borderBottom = _border.default.borderBottom,
+          borderLeft = _border.default.borderLeft,
+          borderRadius = _border.default.borderRadius
+        exports.borderRadius = borderRadius
+        exports.borderLeft = borderLeft
+        exports.borderBottom = borderBottom
+        exports.borderRight = borderRight
+        exports.borderTop = borderTop
+        exports.borderColor = borderColor
+        exports.borderStyle = borderStyle
+        exports.borderWidth = borderWidth
+        var backgroundImage = _background.default.backgroundImage,
+          backgroundSize = _background.default.backgroundSize,
+          backgroundPosition = _background.default.backgroundPosition,
+          backgroundRepeat = _background.default.backgroundRepeat
+        exports.backgroundRepeat = backgroundRepeat
+        exports.backgroundPosition = backgroundPosition
+        exports.backgroundSize = backgroundSize
+        exports.backgroundImage = backgroundImage
+        var zIndex = _position.default.zIndex,
+          top = _position.default.top,
+          right = _position.default.right,
+          bottom = _position.default.bottom,
+          left = _position.default.left
+        exports.left = left
+        exports.bottom = bottom
+        exports.right = right
+        exports.top = top
+        exports.zIndex = zIndex
+
         // v4 style API shim
         var style = function style(_ref) {
           var prop = _ref.prop,
@@ -45653,24 +44914,24 @@ and limitations under the License.
       {
         '@styled-system/core':
           '../node_modules/@styled-system/core/dist/index.esm.js',
-        '@styled-system/space':
-          '../node_modules/@styled-system/space/dist/index.esm.js',
-        '@styled-system/color':
-          '../node_modules/@styled-system/color/dist/index.esm.js',
         '@styled-system/layout':
           '../node_modules/@styled-system/layout/dist/index.esm.js',
+        '@styled-system/color':
+          '../node_modules/@styled-system/color/dist/index.esm.js',
         '@styled-system/typography':
           '../node_modules/@styled-system/typography/dist/index.esm.js',
         '@styled-system/flexbox':
           '../node_modules/@styled-system/flexbox/dist/index.esm.js',
+        '@styled-system/grid':
+          '../node_modules/@styled-system/grid/dist/index.esm.js',
         '@styled-system/border':
           '../node_modules/@styled-system/border/dist/index.esm.js',
         '@styled-system/background':
           '../node_modules/@styled-system/background/dist/index.esm.js',
         '@styled-system/position':
           '../node_modules/@styled-system/position/dist/index.esm.js',
-        '@styled-system/grid':
-          '../node_modules/@styled-system/grid/dist/index.esm.js',
+        '@styled-system/space':
+          '../node_modules/@styled-system/space/dist/index.esm.js',
         '@styled-system/shadow':
           '../node_modules/@styled-system/shadow/dist/index.esm.js',
         '@styled-system/variant':
@@ -45686,8 +44947,6 @@ and limitations under the License.
         })
         exports.Box = exports.BoxDocz = void 0
 
-        var tslib_1 = _interopRequireWildcard(require('tslib'))
-
         var _react = _interopRequireDefault(require('react'))
 
         var _styledComponents = _interopRequireDefault(
@@ -45700,65 +44959,572 @@ and limitations under the License.
           return obj && obj.__esModule ? obj : { default: obj }
         }
 
-        function _interopRequireWildcard(obj) {
-          if (obj && obj.__esModule) {
-            return obj
-          } else {
-            var newObj = {}
-            if (obj != null) {
-              for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) {
-                  var desc =
-                    Object.defineProperty && Object.getOwnPropertyDescriptor
-                      ? Object.getOwnPropertyDescriptor(obj, key)
-                      : {}
-                  if (desc.get || desc.set) {
-                    Object.defineProperty(newObj, key, desc)
-                  } else {
-                    newObj[key] = obj[key]
-                  }
-                }
-              }
-            }
-            newObj.default = obj
-            return newObj
-          }
-        }
-
         var BoxDocz = function BoxDocz() {
           return _react.default.createElement('div', null)
         }
 
         exports.BoxDocz = BoxDocz
+        var boxStyles = (0, _styledSystem.compose)(
+          _styledSystem.background,
+          _styledSystem.color,
+          _styledSystem.flexbox,
+          _styledSystem.layout,
+          _styledSystem.opacity,
+          _styledSystem.position,
+          _styledSystem.space,
+          _styledSystem.typography
+        )
 
         var Box = _styledComponents.default.div(
-          templateObject_1 ||
-            (templateObject_1 = tslib_1.__makeTemplateObject(
-              ['\n  box-sizing: border-box;\n  ', '\n'],
-              ['\n  box-sizing: border-box;\n  ', '\n']
-            )),
-          (0, _styledSystem.compose)(
-            _styledSystem.background,
-            _styledSystem.color,
-            _styledSystem.flex,
-            _styledSystem.layout,
-            _styledSystem.opacity,
-            _styledSystem.position,
-            _styledSystem.space,
-            _styledSystem.typography
-          )
+          {
+            boxSizing: 'border-box',
+          },
+          boxStyles
         )
 
         exports.Box = Box
-        var templateObject_1
       },
       {
-        tslib: '../node_modules/tslib/tslib.es6.js',
         react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
         'styled-system': '../node_modules/styled-system/dist/index.esm.js',
       },
+    ],
+    '../node_modules/tslib/tslib.es6.js': [
+      function(require, module, exports) {
+        'use strict'
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true,
+        })
+        exports.__extends = __extends
+        exports.__rest = __rest
+        exports.__decorate = __decorate
+        exports.__param = __param
+        exports.__metadata = __metadata
+        exports.__awaiter = __awaiter
+        exports.__generator = __generator
+        exports.__exportStar = __exportStar
+        exports.__values = __values
+        exports.__read = __read
+        exports.__spread = __spread
+        exports.__spreadArrays = __spreadArrays
+        exports.__await = __await
+        exports.__asyncGenerator = __asyncGenerator
+        exports.__asyncDelegator = __asyncDelegator
+        exports.__asyncValues = __asyncValues
+        exports.__makeTemplateObject = __makeTemplateObject
+        exports.__importStar = __importStar
+        exports.__importDefault = __importDefault
+        exports.__assign = void 0
+
+        /*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+        /* global Reflect, Promise */
+        var extendStatics = function(d, b) {
+          extendStatics =
+            Object.setPrototypeOf ||
+            ({
+              __proto__: [],
+            } instanceof Array &&
+              function(d, b) {
+                d.__proto__ = b
+              }) ||
+            function(d, b) {
+              for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]
+            }
+
+          return extendStatics(d, b)
+        }
+
+        function __extends(d, b) {
+          extendStatics(d, b)
+
+          function __() {
+            this.constructor = d
+          }
+
+          d.prototype =
+            b === null
+              ? Object.create(b)
+              : ((__.prototype = b.prototype), new __())
+        }
+
+        var __assign = function() {
+          exports.__assign = __assign =
+            Object.assign ||
+            function __assign(t) {
+              for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i]
+
+                for (var p in s)
+                  if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p]
+              }
+
+              return t
+            }
+
+          return __assign.apply(this, arguments)
+        }
+
+        exports.__assign = __assign
+
+        function __rest(s, e) {
+          var t = {}
+
+          for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+              t[p] = s[p]
+
+          if (s != null && typeof Object.getOwnPropertySymbols === 'function')
+            for (
+              var i = 0, p = Object.getOwnPropertySymbols(s);
+              i < p.length;
+              i++
+            ) {
+              if (
+                e.indexOf(p[i]) < 0 &&
+                Object.prototype.propertyIsEnumerable.call(s, p[i])
+              )
+                t[p[i]] = s[p[i]]
+            }
+          return t
+        }
+
+        function __decorate(decorators, target, key, desc) {
+          var c = arguments.length,
+            r =
+              c < 3
+                ? target
+                : desc === null
+                ? (desc = Object.getOwnPropertyDescriptor(target, key))
+                : desc,
+            d
+          if (
+            typeof Reflect === 'object' &&
+            typeof Reflect.decorate === 'function'
+          )
+            r = Reflect.decorate(decorators, target, key, desc)
+          else
+            for (var i = decorators.length - 1; i >= 0; i--)
+              if ((d = decorators[i]))
+                r =
+                  (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) ||
+                  r
+          return c > 3 && r && Object.defineProperty(target, key, r), r
+        }
+
+        function __param(paramIndex, decorator) {
+          return function(target, key) {
+            decorator(target, key, paramIndex)
+          }
+        }
+
+        function __metadata(metadataKey, metadataValue) {
+          if (
+            typeof Reflect === 'object' &&
+            typeof Reflect.metadata === 'function'
+          )
+            return Reflect.metadata(metadataKey, metadataValue)
+        }
+
+        function __awaiter(thisArg, _arguments, P, generator) {
+          return new (P || (P = Promise))(function(resolve, reject) {
+            function fulfilled(value) {
+              try {
+                step(generator.next(value))
+              } catch (e) {
+                reject(e)
+              }
+            }
+
+            function rejected(value) {
+              try {
+                step(generator['throw'](value))
+              } catch (e) {
+                reject(e)
+              }
+            }
+
+            function step(result) {
+              result.done
+                ? resolve(result.value)
+                : new P(function(resolve) {
+                    resolve(result.value)
+                  }).then(fulfilled, rejected)
+            }
+
+            step(
+              (generator = generator.apply(thisArg, _arguments || [])).next()
+            )
+          })
+        }
+
+        function __generator(thisArg, body) {
+          var _ = {
+              label: 0,
+              sent: function() {
+                if (t[0] & 1) throw t[1]
+                return t[1]
+              },
+              trys: [],
+              ops: [],
+            },
+            f,
+            y,
+            t,
+            g
+          return (
+            (g = {
+              next: verb(0),
+              throw: verb(1),
+              return: verb(2),
+            }),
+            typeof Symbol === 'function' &&
+              (g[Symbol.iterator] = function() {
+                return this
+              }),
+            g
+          )
+
+          function verb(n) {
+            return function(v) {
+              return step([n, v])
+            }
+          }
+
+          function step(op) {
+            if (f) throw new TypeError('Generator is already executing.')
+
+            while (_)
+              try {
+                if (
+                  ((f = 1),
+                  y &&
+                    (t =
+                      op[0] & 2
+                        ? y['return']
+                        : op[0]
+                        ? y['throw'] || ((t = y['return']) && t.call(y), 0)
+                        : y.next) &&
+                    !(t = t.call(y, op[1])).done)
+                )
+                  return t
+                if (((y = 0), t)) op = [op[0] & 2, t.value]
+
+                switch (op[0]) {
+                  case 0:
+                  case 1:
+                    t = op
+                    break
+
+                  case 4:
+                    _.label++
+                    return {
+                      value: op[1],
+                      done: false,
+                    }
+
+                  case 5:
+                    _.label++
+                    y = op[1]
+                    op = [0]
+                    continue
+
+                  case 7:
+                    op = _.ops.pop()
+
+                    _.trys.pop()
+
+                    continue
+
+                  default:
+                    if (
+                      !((t = _.trys), (t = t.length > 0 && t[t.length - 1])) &&
+                      (op[0] === 6 || op[0] === 2)
+                    ) {
+                      _ = 0
+                      continue
+                    }
+
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
+                      _.label = op[1]
+                      break
+                    }
+
+                    if (op[0] === 6 && _.label < t[1]) {
+                      _.label = t[1]
+                      t = op
+                      break
+                    }
+
+                    if (t && _.label < t[2]) {
+                      _.label = t[2]
+
+                      _.ops.push(op)
+
+                      break
+                    }
+
+                    if (t[2]) _.ops.pop()
+
+                    _.trys.pop()
+
+                    continue
+                }
+
+                op = body.call(thisArg, _)
+              } catch (e) {
+                op = [6, e]
+                y = 0
+              } finally {
+                f = t = 0
+              }
+
+            if (op[0] & 5) throw op[1]
+            return {
+              value: op[0] ? op[1] : void 0,
+              done: true,
+            }
+          }
+        }
+
+        function __exportStar(m, exports) {
+          for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p]
+        }
+
+        function __values(o) {
+          var m = typeof Symbol === 'function' && o[Symbol.iterator],
+            i = 0
+          if (m) return m.call(o)
+          return {
+            next: function() {
+              if (o && i >= o.length) o = void 0
+              return {
+                value: o && o[i++],
+                done: !o,
+              }
+            },
+          }
+        }
+
+        function __read(o, n) {
+          var m = typeof Symbol === 'function' && o[Symbol.iterator]
+          if (!m) return o
+          var i = m.call(o),
+            r,
+            ar = [],
+            e
+
+          try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+              ar.push(r.value)
+          } catch (error) {
+            e = {
+              error: error,
+            }
+          } finally {
+            try {
+              if (r && !r.done && (m = i['return'])) m.call(i)
+            } finally {
+              if (e) throw e.error
+            }
+          }
+
+          return ar
+        }
+
+        function __spread() {
+          for (var ar = [], i = 0; i < arguments.length; i++)
+            ar = ar.concat(__read(arguments[i]))
+
+          return ar
+        }
+
+        function __spreadArrays() {
+          for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+            s += arguments[i].length
+
+          for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+              r[k] = a[j]
+
+          return r
+        }
+
+        function __await(v) {
+          return this instanceof __await ? ((this.v = v), this) : new __await(v)
+        }
+
+        function __asyncGenerator(thisArg, _arguments, generator) {
+          if (!Symbol.asyncIterator)
+            throw new TypeError('Symbol.asyncIterator is not defined.')
+          var g = generator.apply(thisArg, _arguments || []),
+            i,
+            q = []
+          return (
+            (i = {}),
+            verb('next'),
+            verb('throw'),
+            verb('return'),
+            (i[Symbol.asyncIterator] = function() {
+              return this
+            }),
+            i
+          )
+
+          function verb(n) {
+            if (g[n])
+              i[n] = function(v) {
+                return new Promise(function(a, b) {
+                  q.push([n, v, a, b]) > 1 || resume(n, v)
+                })
+              }
+          }
+
+          function resume(n, v) {
+            try {
+              step(g[n](v))
+            } catch (e) {
+              settle(q[0][3], e)
+            }
+          }
+
+          function step(r) {
+            r.value instanceof __await
+              ? Promise.resolve(r.value.v).then(fulfill, reject)
+              : settle(q[0][2], r)
+          }
+
+          function fulfill(value) {
+            resume('next', value)
+          }
+
+          function reject(value) {
+            resume('throw', value)
+          }
+
+          function settle(f, v) {
+            if ((f(v), q.shift(), q.length)) resume(q[0][0], q[0][1])
+          }
+        }
+
+        function __asyncDelegator(o) {
+          var i, p
+          return (
+            (i = {}),
+            verb('next'),
+            verb('throw', function(e) {
+              throw e
+            }),
+            verb('return'),
+            (i[Symbol.iterator] = function() {
+              return this
+            }),
+            i
+          )
+
+          function verb(n, f) {
+            i[n] = o[n]
+              ? function(v) {
+                  return (p = !p)
+                    ? {
+                        value: __await(o[n](v)),
+                        done: n === 'return',
+                      }
+                    : f
+                    ? f(v)
+                    : v
+                }
+              : f
+          }
+        }
+
+        function __asyncValues(o) {
+          if (!Symbol.asyncIterator)
+            throw new TypeError('Symbol.asyncIterator is not defined.')
+          var m = o[Symbol.asyncIterator],
+            i
+          return m
+            ? m.call(o)
+            : ((o =
+                typeof __values === 'function'
+                  ? __values(o)
+                  : o[Symbol.iterator]()),
+              (i = {}),
+              verb('next'),
+              verb('throw'),
+              verb('return'),
+              (i[Symbol.asyncIterator] = function() {
+                return this
+              }),
+              i)
+
+          function verb(n) {
+            i[n] =
+              o[n] &&
+              function(v) {
+                return new Promise(function(resolve, reject) {
+                  ;(v = o[n](v)), settle(resolve, reject, v.done, v.value)
+                })
+              }
+          }
+
+          function settle(resolve, reject, d, v) {
+            Promise.resolve(v).then(function(v) {
+              resolve({
+                value: v,
+                done: d,
+              })
+            }, reject)
+          }
+        }
+
+        function __makeTemplateObject(cooked, raw) {
+          if (Object.defineProperty) {
+            Object.defineProperty(cooked, 'raw', {
+              value: raw,
+            })
+          } else {
+            cooked.raw = raw
+          }
+
+          return cooked
+        }
+
+        function __importStar(mod) {
+          if (mod && mod.__esModule) return mod
+          var result = {}
+          if (mod != null)
+            for (var k in mod)
+              if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k]
+          result.default = mod
+          return result
+        }
+
+        function __importDefault(mod) {
+          return mod && mod.__esModule
+            ? mod
+            : {
+                default: mod,
+              }
+        }
+      },
+      {},
     ],
     '../src/Contain.tsx': [
       function(require, module, exports) {
@@ -45846,13 +45612,13 @@ and limitations under the License.
         })
         exports.Flex = exports.FlexDocz = void 0
 
-        var tslib_1 = _interopRequireWildcard(require('tslib'))
-
         var _react = _interopRequireDefault(require('react'))
 
         var _styledComponents = _interopRequireDefault(
           require('styled-components')
         )
+
+        var _styledSystem = require('styled-system')
 
         var _Box = require('./Box')
 
@@ -45860,51 +45626,25 @@ and limitations under the License.
           return obj && obj.__esModule ? obj : { default: obj }
         }
 
-        function _interopRequireWildcard(obj) {
-          if (obj && obj.__esModule) {
-            return obj
-          } else {
-            var newObj = {}
-            if (obj != null) {
-              for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) {
-                  var desc =
-                    Object.defineProperty && Object.getOwnPropertyDescriptor
-                      ? Object.getOwnPropertyDescriptor(obj, key)
-                      : {}
-                  if (desc.get || desc.set) {
-                    Object.defineProperty(newObj, key, desc)
-                  } else {
-                    newObj[key] = obj[key]
-                  }
-                }
-              }
-            }
-            newObj.default = obj
-            return newObj
-          }
-        }
-
         var FlexDocz = function FlexDocz() {
           return _react.default.createElement('div', null)
         }
 
         exports.FlexDocz = FlexDocz
+        var flexStyles = (0, _styledSystem.compose)(_styledSystem.display)
         var Flex = (0, _styledComponents.default)(_Box.Box)(
-          templateObject_1 ||
-            (templateObject_1 = tslib_1.__makeTemplateObject(
-              ['\n  display: flex;\n'],
-              ['\n  display: flex;\n']
-            ))
+          {
+            display: 'flex',
+          },
+          flexStyles
         )
         exports.Flex = Flex
-        var templateObject_1
       },
       {
-        tslib: '../node_modules/tslib/tslib.es6.js',
         react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
+        'styled-system': '../node_modules/styled-system/dist/index.esm.js',
         './Box': '../src/Box.tsx',
       },
     ],
@@ -46113,8 +45853,6 @@ and limitations under the License.
 
         var tslib_1 = _interopRequireWildcard(require('tslib'))
 
-        var _react = _interopRequireDefault(require('react'))
-
         var _styledComponents = _interopRequireDefault(
           require('styled-components')
         )
@@ -46171,7 +45909,7 @@ and limitations under the License.
           cssProperty: 'width',
           transformValue: transformValue,
         })
-        var StyledColumn = (0, _styledComponents.default)(_Box.Box)(
+        var Column = (0, _styledComponents.default)(_Box.Box)(
           templateObject_1 ||
             (templateObject_1 = tslib_1.__makeTemplateObject(
               ['\n  ', '\n  ', '\n'],
@@ -46180,21 +45918,11 @@ and limitations under the License.
           col,
           inset
         )
-
-        var Column = function Column(props) {
-          return _react.default.createElement(
-            StyledColumn,
-            tslib_1.__assign({}, props),
-            props.children
-          )
-        }
-
         exports.Column = Column
         var templateObject_1
       },
       {
         tslib: '../node_modules/tslib/tslib.es6.js',
-        react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
         'styled-system': '../node_modules/styled-system/dist/index.esm.js',
@@ -46254,7 +45982,7 @@ and limitations under the License.
         }
 
         exports.TextDocz = TextDocz
-        var StyledText = (0, _styledComponents.default)(_Box.Box)(
+        var Text = (0, _styledComponents.default)(_Box.Box)(
           templateObject_2 ||
             (templateObject_2 = tslib_1.__makeTemplateObject(
               ['\n  ', '\n'],
@@ -46277,26 +46005,10 @@ and limitations under the License.
             )
           }
         )
-
-        var Text = function Text(_a) {
-          var _b = _a.as,
-            as = _b === void 0 ? 'span' : _b,
-            children = _a.children,
-            props = tslib_1.__rest(_a, ['as', 'children'])
-
-          return _react.default.createElement(
-            StyledText,
-            tslib_1.__assign(
-              {
-                as: as,
-              },
-              props
-            ),
-            children
-          )
-        }
-
         exports.Text = Text
+        Text.defaultProps = {
+          as: 'span',
+        }
         var templateObject_1, templateObject_2
       },
       {
@@ -46317,8 +46029,6 @@ and limitations under the License.
         exports.Heading = void 0
 
         var tslib_1 = _interopRequireWildcard(require('tslib'))
-
-        var _react = _interopRequireDefault(require('react'))
 
         var _styledComponents = _interopRequireDefault(
           require('styled-components')
@@ -46355,38 +46065,21 @@ and limitations under the License.
           }
         }
 
-        var StyledHeading = (0, _styledComponents.default)(_Text.Text)(
+        var Heading = (0, _styledComponents.default)(_Text.Text)(
           templateObject_1 ||
             (templateObject_1 = tslib_1.__makeTemplateObject(
               ['\n  margin: 0px;\n'],
               ['\n  margin: 0px;\n']
             ))
         )
-
-        var Heading = function Heading(_a) {
-          var _b = _a.as,
-            as = _b === void 0 ? 'h2' : _b,
-            children = _a.children,
-            props = tslib_1.__rest(_a, ['as', 'children'])
-
-          return _react.default.createElement(
-            StyledHeading,
-            tslib_1.__assign(
-              {
-                as: as,
-              },
-              props
-            ),
-            children
-          )
-        }
-
         exports.Heading = Heading
+        Heading.defaultProps = {
+          as: 'h2',
+        }
         var templateObject_1
       },
       {
         tslib: '../node_modules/tslib/tslib.es6.js',
-        react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
         './Text': '../src/Text.tsx',
@@ -46553,7 +46246,7 @@ and limitations under the License.
           var hostname = '' || location.hostname
           var protocol = location.protocol === 'https:' ? 'wss' : 'ws'
           var ws = new WebSocket(
-            protocol + '://' + hostname + ':' + '60664' + '/'
+            protocol + '://' + hostname + ':' + '52575' + '/'
           )
 
           ws.onmessage = function(event) {

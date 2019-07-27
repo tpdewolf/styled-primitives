@@ -29,7 +29,7 @@ export type TextProps = BoxProps &
 
 export const TextDocz: React.FC<TextDoczProps> = () => <div />
 
-const StyledText = styled(Box)<TextProps>`
+export const Text = styled(Box)<TextProps>`
   ${props =>
     props.singleLine &&
     css`
@@ -40,12 +40,6 @@ const StyledText = styled(Box)<TextProps>`
     `}
 `
 
-export const Text: React.FC<TextProps> = ({
-  as = 'span',
-  children,
-  ...props
-}) => (
-  <StyledText as={as} {...props}>
-    {children}
-  </StyledText>
-)
+Text.defaultProps = {
+  as: 'span',
+}

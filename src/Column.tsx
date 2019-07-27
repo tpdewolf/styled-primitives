@@ -1,4 +1,3 @@
-import React, { FC } from 'react'
 import styled from 'styled-components'
 import { style } from 'styled-system'
 
@@ -30,11 +29,7 @@ const col = style({
   transformValue,
 })
 
-const StyledColumn = styled(Box)<ColumnProps>`
+export const Column = styled(Box)<ColumnProps>`
   ${col}
   ${inset}
 `
-
-export const Column: FC<ColumnProps> = props => {
-  return <StyledColumn {...props}>{props.children}</StyledColumn>
-}

@@ -23,5 +23,10 @@ export declare type TextProps = BoxProps &
   HTMLAttributes<HTMLParagraphElement> &
   HTMLAttributes<HTMLLabelElement>
 export declare const TextDocz: React.FC<TextDoczProps>
-export declare const Text: React.FC<TextProps>
+export declare const Text: import('styled-components').StyledComponent<
+  'div',
+  any,
+  TextProps,
+  never
+>
 export {}
