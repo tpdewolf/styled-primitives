@@ -45618,8 +45618,6 @@ and limitations under the License.
           require('styled-components')
         )
 
-        var _styledSystem = require('styled-system')
-
         var _Box = require('./Box')
 
         function _interopRequireDefault(obj) {
@@ -45631,20 +45629,16 @@ and limitations under the License.
         }
 
         exports.FlexDocz = FlexDocz
-        var flexStyles = (0, _styledSystem.compose)(_styledSystem.display)
-        var Flex = (0, _styledComponents.default)(_Box.Box)(
-          {
-            display: 'flex',
-          },
-          flexStyles
-        )
+        var Flex = (0, _styledComponents.default)(_Box.Box)({})
         exports.Flex = Flex
+        Flex.defaultProps = {
+          display: 'flex',
+        }
       },
       {
         react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
-        'styled-system': '../node_modules/styled-system/dist/index.esm.js',
         './Box': '../src/Box.tsx',
       },
     ],
@@ -45728,11 +45722,7 @@ and limitations under the License.
 
         var _react = _interopRequireWildcard(require('react'))
 
-        var _styledComponents = _interopRequireWildcard(
-          require('styled-components')
-        )
-
-        var _styledSystem = require('styled-system')
+        var _styledComponents = require('styled-components')
 
         var _Flex = require('./Flex')
 
@@ -45763,31 +45753,6 @@ and limitations under the License.
           }
         }
 
-        var gutterLeft = (0, _styledSystem.style)({
-          prop: 'gutter',
-          cssProperty: 'marginLeft',
-          transformValue: function transformValue(n) {
-            return (Number(n) / 2) * -1
-          },
-        })
-        var gutterRight = (0, _styledSystem.style)({
-          prop: 'gutter',
-          cssProperty: 'marginRight',
-          transformValue: function transformValue(n) {
-            return (Number(n) / 2) * -1
-          },
-        })
-        var StyledRow = (0, _styledComponents.default)(_Flex.Flex)(
-          templateObject_1 ||
-            (templateObject_1 = tslib_1.__makeTemplateObject(
-              ['\n  flex-wrap: wrap;\n  ', '\n  ', '\n  ', '\n'],
-              ['\n  flex-wrap: wrap;\n  ', '\n  ', '\n  ', '\n']
-            )),
-          _styledSystem.flexWrap,
-          gutterLeft,
-          gutterRight
-        )
-
         var Row = function Row(_a) {
           var gutter = _a.gutter,
             children = _a.children,
@@ -45811,11 +45776,17 @@ and limitations under the License.
                   return space && space / 2
                 })
               : gutter / 2
+          var mx =
+            gutter && Array.isArray(gutter)
+              ? gutter.map(function(space) {
+                  return space && (space / 2) * -1
+                })
+              : (gutter / 2) * -1
           return _react.default.createElement(
-            StyledRow,
+            _Flex.Flex,
             tslib_1.__assign(
               {
-                gutter: gutter,
+                mx: mx,
               },
               props
             ),
@@ -45830,14 +45801,12 @@ and limitations under the License.
         }
 
         exports.Row = Row
-        var templateObject_1
       },
       {
         tslib: '../node_modules/tslib/tslib.es6.js',
         react: '../node_modules/react/index.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
-        'styled-system': '../node_modules/styled-system/dist/index.esm.js',
         './Flex': '../src/Flex.tsx',
         './Space': '../src/Space.tsx',
       },
@@ -46158,34 +46127,42 @@ and limitations under the License.
             React.createElement(
               React.Fragment,
               null,
-              React.createElement(Box_1.Box, null, 'Hello'),
               React.createElement(
                 Contain_1.Contain,
                 null,
+                React.createElement(Heading_1.Heading, null, 'Grid'),
                 React.createElement(
                   Row_1.Row,
                   null,
                   React.createElement(
                     Column_1.Column,
                     {
-                      col: 6,
+                      col: [12, 6],
                     },
-                    React.createElement(Heading_1.Heading, null, 'Hello'),
-                    React.createElement(Text_1.Text, null, 'Test')
+                    React.createElement(
+                      Box_1.Box,
+                      {
+                        bg: '#ccc',
+                        p: 10,
+                      },
+                      React.createElement(Heading_1.Heading, null, 'Hello'),
+                      React.createElement(Text_1.Text, null, 'Test')
+                    )
                   ),
                   React.createElement(
                     Column_1.Column,
                     {
-                      col: 6,
+                      col: [12, 6],
                     },
                     React.createElement(
-                      Heading_1.Heading,
+                      Box_1.Box,
                       {
-                        color: 'red',
+                        bg: '#ccc',
+                        p: 10,
                       },
-                      'Hello'
-                    ),
-                    React.createElement(Text_1.Text, null, 'Test')
+                      React.createElement(Heading_1.Heading, null, 'Hello'),
+                      React.createElement(Text_1.Text, null, 'Test')
+                    )
                   )
                 )
               )
@@ -46246,7 +46223,7 @@ and limitations under the License.
           var hostname = '' || location.hostname
           var protocol = location.protocol === 'https:' ? 'wss' : 'ws'
           var ws = new WebSocket(
-            protocol + '://' + hostname + ':' + '52575' + '/'
+            protocol + '://' + hostname + ':' + '49362' + '/'
           )
 
           ws.onmessage = function(event) {

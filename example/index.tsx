@@ -14,16 +14,20 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Box>Hello</Box>
         <Contain>
+          <Heading>Grid</Heading>
           <Row>
-            <Column col={6}>
-              <Heading>Hello</Heading>
-              <Text>Test</Text>
+            <Column col={[12, 6]}>
+              <Box bg="#ccc" p={10}>
+                <Heading>Hello</Heading>
+                <Text>Test</Text>
+              </Box>
             </Column>
-            <Column col={6}>
-              <Heading color="red">Hello</Heading>
-              <Text>Test</Text>
+            <Column col={[12, 6]}>
+              <Box bg="#ccc" p={10}>
+                <Heading>Hello</Heading>
+                <Text>Test</Text>
+              </Box>
             </Column>
           </Row>
         </Contain>

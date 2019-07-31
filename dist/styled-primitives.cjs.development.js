@@ -200,35 +200,6 @@ var Space =
     componentId: 'aw4q1b-0',
   })(styledSystem.space)
 
-var gutterLeft =
-  /*#__PURE__*/
-  styledSystem.style({
-    prop: 'gutter',
-    cssProperty: 'marginLeft',
-    transformValue: function transformValue(n) {
-      return (Number(n) / 2) * -1
-    },
-  })
-var gutterRight =
-  /*#__PURE__*/
-  styledSystem.style({
-    prop: 'gutter',
-    cssProperty: 'marginRight',
-    transformValue: function transformValue(n) {
-      return (Number(n) / 2) * -1
-    },
-  })
-var StyledRow =
-  /*#__PURE__*/
-  styled__default(Flex).withConfig({
-    displayName: 'Row__StyledRow',
-    componentId: 'sc-1j9hqig-0',
-  })(
-    ['flex-wrap:wrap;', ' ', ' ', ''],
-    styledSystem.flexWrap,
-    gutterLeft,
-    gutterRight
-  )
 var Row = function Row(_ref) {
   var gutter = _ref.gutter,
     children = _ref.children,
@@ -250,11 +221,17 @@ var Row = function Row(_ref) {
           return space && space / 2
         })
       : gutter / 2
+  var mx =
+    gutter && Array.isArray(gutter)
+      ? gutter.map(function(space) {
+          return space && (space / 2) * -1
+        })
+      : (gutter / 2) * -1
   return React__default.createElement(
-    StyledRow,
+    Flex,
     Object.assign(
       {
-        gutter: gutter,
+        mx: mx,
       },
       props
     ),

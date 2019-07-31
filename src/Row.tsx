@@ -1,12 +1,6 @@
 import React, { FC, useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
-import {
-  flexWrap,
-  SpaceProps,
-  style,
-  WidthProps,
-  FlexboxProps,
-} from 'styled-system'
+import { ThemeContext } from 'styled-components'
+import { SpaceProps, WidthProps, FlexboxProps } from 'styled-system'
 
 import { Flex } from './Flex'
 import { Space } from './Space'
@@ -16,29 +10,6 @@ interface GutterProps {
 }
 
 type RowProps = FlexboxProps & GutterProps & SpaceProps & WidthProps
-
-const gutterLeft = style({
-  prop: 'gutter',
-  cssProperty: 'marginLeft',
-  transformValue: n => {
-    return (Number(n) / 2) * -1
-  },
-})
-
-const gutterRight = style({
-  prop: 'gutter',
-  cssProperty: 'marginRight',
-  transformValue: n => {
-    return (Number(n) / 2) * -1
-  },
-})
-
-const StyledRow = styled(Flex)<RowProps>`
-  flex-wrap: wrap;
-  ${flexWrap}
-  ${gutterLeft}
-  ${gutterRight}
-`
 
 export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
   const themeContext = useContext(ThemeContext)
@@ -56,9 +27,14 @@ export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
       ? gutter.map(space => space && space / 2)
       : gutter / 2
 
+  const mx =
+    gutter && Array.isArray(gutter)
+      ? gutter.map(space => space && (space / 2) * -1)
+      : (gutter / 2) * -1
+
   return (
-    <StyledRow gutter={gutter} {...props}>
+    <Flex mx={mx} {...props}>
       <Space px={spacing}>{children}</Space>
-    </StyledRow>
+    </Flex>
   )
 }
