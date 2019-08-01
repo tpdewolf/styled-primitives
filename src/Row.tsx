@@ -33,7 +33,7 @@ export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
       : (gutter / 2) * -1
 
   return (
-    <Flex mx={mx} {...props}>
+    <Flex mx={mx} flexWrap="wrap" {...props}>
       <Space px={spacing}>{children}</Space>
     </Flex>
   )

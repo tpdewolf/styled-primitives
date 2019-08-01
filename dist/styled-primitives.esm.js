@@ -231,6 +231,7 @@ var Row = function Row(_ref) {
     Object.assign(
       {
         mx: mx,
+        flexWrap: 'wrap',
       },
       props
     ),
