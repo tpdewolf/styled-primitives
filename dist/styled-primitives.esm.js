@@ -146,7 +146,7 @@ var Heading =
   styled(Text).withConfig({
     displayName: 'Heading',
     componentId: 'sc-1vv0hjt-0',
-  })(['margin:0px;'])
+  })({})
 Heading.defaultProps = {
   as: 'h2',
 }

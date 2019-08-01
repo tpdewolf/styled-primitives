@@ -8,9 +8,7 @@ export type HeadingProps = TextProps &
     as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   }
 
-export const Heading = styled(Text)<HeadingProps>`
-  margin: 0px;
-`
+export const Heading = styled(Text)<HeadingProps>({})
 
 Heading.defaultProps = {
   as: 'h2',
