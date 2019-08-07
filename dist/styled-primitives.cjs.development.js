@@ -17,12 +17,15 @@ var boxStyles =
   /*#__PURE__*/
   styledSystem.compose(
     styledSystem.background,
+    styledSystem.buttonStyle,
     styledSystem.color,
+    styledSystem.colorStyle,
     styledSystem.flexbox,
     styledSystem.layout,
     styledSystem.opacity,
     styledSystem.position,
     styledSystem.space,
+    styledSystem.textStyle,
     styledSystem.typography
   )
 var Box =

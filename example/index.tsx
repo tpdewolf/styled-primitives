@@ -16,6 +16,7 @@ const App = () => {
       <>
         <Contain>
           <Heading>Grid</Heading>
+          <Text textStyle="caps">Dit is een all caps ding</Text>
           <Row>
             <Column col={[12, 6]}>
               <Box bg="#ccc" p={10}>

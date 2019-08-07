@@ -3,12 +3,15 @@ import styled, { ThemeContext, css } from 'styled-components'
 import {
   compose,
   background,
+  buttonStyle,
   color,
+  colorStyle,
   flexbox,
   layout,
   opacity,
   position,
   space,
+  textStyle,
   typography,
   border,
   shadow,
@@ -22,12 +25,15 @@ var boxStyles =
   /*#__PURE__*/
   compose(
     background,
+    buttonStyle,
     color,
+    colorStyle,
     flexbox,
     layout,
     opacity,
     position,
     space,
+    textStyle,
     typography
   )
 var Box =

@@ -11,4 +11,10 @@ export const grid = {
 export const theme: DefaultTheme = {
   breakpoints: ['40em', '52em', '64em', '80em'],
   grid,
+  textStyles: {
+    caps: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.1em',
+    },
+  },
 }

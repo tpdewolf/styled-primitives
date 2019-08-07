@@ -44966,12 +44966,15 @@ object-assign
         exports.BoxDocz = BoxDocz
         var boxStyles = (0, _styledSystem.compose)(
           _styledSystem.background,
+          _styledSystem.buttonStyle,
           _styledSystem.color,
+          _styledSystem.colorStyle,
           _styledSystem.flexbox,
           _styledSystem.layout,
           _styledSystem.opacity,
           _styledSystem.position,
           _styledSystem.space,
+          _styledSystem.textStyle,
           _styledSystem.typography
         )
 
@@ -45787,6 +45790,7 @@ and limitations under the License.
             tslib_1.__assign(
               {
                 mx: mx,
+                flexWrap: 'wrap',
               },
               props
             ),
@@ -45997,8 +46001,6 @@ and limitations under the License.
         })
         exports.Heading = void 0
 
-        var tslib_1 = _interopRequireWildcard(require('tslib'))
-
         var _styledComponents = _interopRequireDefault(
           require('styled-components')
         )
@@ -46009,46 +46011,13 @@ and limitations under the License.
           return obj && obj.__esModule ? obj : { default: obj }
         }
 
-        function _interopRequireWildcard(obj) {
-          if (obj && obj.__esModule) {
-            return obj
-          } else {
-            var newObj = {}
-            if (obj != null) {
-              for (var key in obj) {
-                if (Object.prototype.hasOwnProperty.call(obj, key)) {
-                  var desc =
-                    Object.defineProperty && Object.getOwnPropertyDescriptor
-                      ? Object.getOwnPropertyDescriptor(obj, key)
-                      : {}
-                  if (desc.get || desc.set) {
-                    Object.defineProperty(newObj, key, desc)
-                  } else {
-                    newObj[key] = obj[key]
-                  }
-                }
-              }
-            }
-            newObj.default = obj
-            return newObj
-          }
-        }
-
-        var Heading = (0, _styledComponents.default)(_Text.Text)(
-          templateObject_1 ||
-            (templateObject_1 = tslib_1.__makeTemplateObject(
-              ['\n  margin: 0px;\n'],
-              ['\n  margin: 0px;\n']
-            ))
-        )
+        var Heading = (0, _styledComponents.default)(_Text.Text)({})
         exports.Heading = Heading
         Heading.defaultProps = {
           as: 'h2',
         }
-        var templateObject_1
       },
       {
-        tslib: '../node_modules/tslib/tslib.es6.js',
         'styled-components':
           '../node_modules/styled-components/dist/styled-components.browser.esm.js',
         './Text': '../src/Text.tsx',
@@ -46071,6 +46040,12 @@ and limitations under the License.
         exports.theme = {
           breakpoints: ['40em', '52em', '64em', '80em'],
           grid: exports.grid,
+          textStyles: {
+            caps: {
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+            },
+          },
         }
       },
       {},
@@ -46131,6 +46106,13 @@ and limitations under the License.
                 Contain_1.Contain,
                 null,
                 React.createElement(Heading_1.Heading, null, 'Grid'),
+                React.createElement(
+                  Text_1.Text,
+                  {
+                    textStyle: 'caps',
+                  },
+                  'Dit is een all caps ding'
+                ),
                 React.createElement(
                   Row_1.Row,
                   null,
@@ -46223,7 +46205,7 @@ and limitations under the License.
           var hostname = '' || location.hostname
           var protocol = location.protocol === 'https:' ? 'wss' : 'ws'
           var ws = new WebSocket(
-            protocol + '://' + hostname + ':' + '49362' + '/'
+            protocol + '://' + hostname + ':' + '64020' + '/'
           )
 
           ws.onmessage = function(event) {
