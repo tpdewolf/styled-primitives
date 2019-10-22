@@ -31,6 +31,13 @@ const App = () => {
               </Box>
             </Column>
           </Row>
+
+          <Row>
+            <Column>Bla</Column>
+            {[].length > 2 && <Column>2</Column>}
+            <Column>3</Column>
+            <Column>4</Column>
+          </Row>
         </Contain>
       </>
     </ThemeProvider>

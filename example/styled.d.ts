@@ -7,5 +7,8 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     breakpoints: string[]
     grid: ThemeGrid
+    textStyles?: any
+    colorStyles?: any
+    buttonStyles?: any
   }
 }

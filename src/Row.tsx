@@ -32,6 +32,8 @@ export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
       ? gutter.map(space => space && (space / 2) * -1)
       : (gutter / 2) * -1
 
+  // const filteredChildren = React.Children.toArray(children).filter(Boolean)
+
   return (
     <Flex mx={mx} flexWrap="wrap" {...props}>
       <Space px={spacing}>{children}</Space>

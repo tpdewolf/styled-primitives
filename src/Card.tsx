@@ -9,7 +9,7 @@ import {
 
 import { Box } from './Box'
 
-type CardProps = BorderProps & ShadowProps
+export type CardProps = BorderProps & ShadowProps
 
 export const Card = styled(Box)<CardProps>(
   compose(

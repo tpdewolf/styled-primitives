@@ -1,21 +1,20 @@
 {
   "name": "@tpdewolf/styled-primitives",
   "version": "2.0.8",
+  "license": "MIT",
+  "author": "Tim de Wolf",
   "main": "dist/index.js",
   "module": "dist/styled-primitives.esm.js",
   "typings": "dist/index.d.ts",
-  "license": "MIT",
   "files": [
     "dist"
   ],
   "repository": "github:tpdewolf/styled-primitives",
-  "author": {
-    "name": "Tim de Wolf"
-  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --env=jsdom"
+    "test": "tsdx test --env=jsdom",
+    "lint": "tsdx lint"
   },
   "peerDependencies": {
     "react": ">=16.8",
@@ -24,7 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "tsdx lint"
     }
   },
   "prettier": {
@@ -34,20 +33,20 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.4",
-    "@types/styled-components": "^4.1.18",
-    "@types/styled-system": "^5.0.0",
-    "husky": "^3.0.1",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2",
-    "styled-system": "^5.0.15",
-    "tsdx": "https://github.com/tpdewolf/tsdx",
+    "@babel/core": "^7.6.4",
+    "@types/jest": "^24.0.19",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/styled-components": "^4.1.19",
+    "@types/styled-system": "^5.1.2",
+    "babel-plugin-styled-components": "^1.10.6",
+    "husky": "^3.0.9",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "styled-components": "^4.4.0",
+    "styled-system": "^5.1.2",
+    "tsdx": "^0.10.5",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.4"
   }
 }
