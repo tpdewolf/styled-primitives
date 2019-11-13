@@ -2,35 +2,68 @@
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var React = require('react');
-var React__default = _interopDefault(React);
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
 var styledSystem = require('styled-system');
+var React = require('react');
+var React__default = _interopDefault(React);
 
-var BoxDocz = function BoxDocz() {
-  return React__default.createElement("div", null);
-};
 var boxStyles =
 /*#__PURE__*/
-styledSystem.compose(styledSystem.background, styledSystem.buttonStyle, styledSystem.color, styledSystem.colorStyle, styledSystem.flexbox, styledSystem.layout, styledSystem.opacity, styledSystem.position, styledSystem.space, styledSystem.textStyle, styledSystem.typography);
+styledSystem.compose(styledSystem.background, styledSystem.color, styledSystem.colorStyle, styledSystem.flexbox, styledSystem.layout, styledSystem.opacity, styledSystem.position, styledSystem.space, styledSystem.textStyle, styledSystem.typography,
+/*#__PURE__*/
+styledSystem.variant({
+  prop: 'variant',
+  scale: 'buttons',
+  variants: {
+    primary: {}
+  }
+}));
 var Box =
 /*#__PURE__*/
-styled__default.div.withConfig({
-  displayName: "Box",
-  componentId: "sc-1gug8g6-0"
-})({
+styled__default.div({
   boxSizing: 'border-box'
 }, boxStyles);
 
 var Card =
 /*#__PURE__*/
-styled__default(Box).withConfig({
-  displayName: "Card",
-  componentId: "m4kmxe-0"
-})(
+styled__default(Box)(
 /*#__PURE__*/
 styledSystem.compose(styledSystem.border, styledSystem.shadow));
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 function transformValue(n) {
   if (!n || isNaN(n)) {
@@ -57,10 +90,9 @@ styledSystem.style({
 });
 var Column =
 /*#__PURE__*/
-styled__default(Box).withConfig({
-  displayName: "Column",
-  componentId: "sc-1a1q09k-0"
-})(["", " ", ""], col, inset);
+styled__default(Box)(
+/*#__PURE__*/
+_templateObject(), col, inset);
 
 var Contain = function Contain(props) {
   var themeContext = React.useContext(styled.ThemeContext);
@@ -76,23 +108,25 @@ var FlexDocz = function FlexDocz() {
 };
 var Flex =
 /*#__PURE__*/
-styled__default(Box).withConfig({
-  displayName: "Flex",
-  componentId: "cxd7w0-0"
-})({});
+styled__default(Box)({});
 Flex.defaultProps = {
   display: 'flex'
 };
 
-var TextDocz = function TextDocz() {
-  return React__default.createElement("div", null);
-};
+function _templateObject$1() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 var Text =
 /*#__PURE__*/
-styled__default(Box).withConfig({
-  displayName: "Text",
-  componentId: "sc-1avl9pw-0"
-})(["", ""], function (props) {
+styled__default(Box)(
+/*#__PURE__*/
+_templateObject$1(), function (props) {
   return props.singleLine && styled.css(["max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"]);
 });
 Text.defaultProps = {
@@ -101,28 +135,10 @@ Text.defaultProps = {
 
 var Heading =
 /*#__PURE__*/
-styled__default(Text).withConfig({
-  displayName: "Heading",
-  componentId: "sc-1vv0hjt-0"
-})({});
+styled__default(Text)({});
 Heading.defaultProps = {
   as: 'h2'
 };
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
 
 var classnames = function classnames() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -148,10 +164,7 @@ var StyledChildren = function StyledChildren(_ref) {
 };
 var Space =
 /*#__PURE__*/
-styled__default(StyledChildren).withConfig({
-  displayName: "Space",
-  componentId: "aw4q1b-0"
-})(styledSystem.space);
+styled__default(StyledChildren)(styledSystem.space);
 
 var Row = function Row(_ref) {
   var gutter = _ref.gutter,
@@ -192,7 +205,6 @@ var defaultGrid = {
 };
 
 exports.Box = Box;
-exports.BoxDocz = BoxDocz;
 exports.Card = Card;
 exports.Column = Column;
 exports.Contain = Contain;
@@ -203,6 +215,5 @@ exports.Row = Row;
 exports.Space = Space;
 exports.StyledChildren = StyledChildren;
 exports.Text = Text;
-exports.TextDocz = TextDocz;
 exports.defaultGrid = defaultGrid;
 //# sourceMappingURL=styled-primitives.cjs.development.js.map

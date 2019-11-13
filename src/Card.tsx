@@ -11,9 +11,4 @@ import { Box } from './Box'
 
 export type CardProps = BorderProps & ShadowProps
 
-export const Card = styled(Box)<CardProps>(
-  compose(
-    border,
-    shadow
-  )
-)
+export const Card = styled(Box)<CardProps>(compose(border, shadow))

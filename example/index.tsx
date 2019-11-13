@@ -38,6 +38,10 @@ const App = () => {
             <Column>3</Column>
             <Column>4</Column>
           </Row>
+
+          <Box variant="primary" as="button">
+            dfgdfgf
+          </Box>
         </Contain>
       </>
     </ThemeProvider>

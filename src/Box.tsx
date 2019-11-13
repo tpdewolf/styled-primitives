@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 import {
   background,
@@ -19,14 +19,14 @@ import {
   typography,
   TypographyProps,
   textStyle,
-  buttonStyle,
   colorStyle,
   TextStyleProps,
   ColorStyleProps,
   ButtonStyleProps,
+  variant,
 } from 'styled-system'
 
-type BoxDoczProps = BackgroundProps &
+export type BoxProps = BackgroundProps &
   ButtonStyleProps &
   ColorProps &
   ColorStyleProps &
@@ -36,15 +36,11 @@ type BoxDoczProps = BackgroundProps &
   PositionProps &
   SpaceProps &
   TextStyleProps &
-  TypographyProps
-
-export const BoxDocz: React.FC<BoxDoczProps> = () => <div />
-
-export type BoxProps = BoxDoczProps & HTMLAttributes<any>
+  TypographyProps &
+  HTMLAttributes<any>
 
 const boxStyles = compose(
   background,
-  buttonStyle,
   color,
   colorStyle,
   flexbox,
@@ -53,7 +49,14 @@ const boxStyles = compose(
   position,
   space,
   textStyle,
-  typography
+  typography,
+  variant({
+    prop: 'variant',
+    scale: 'buttons',
+    variants: {
+      primary: {},
+    },
+  })
 )
 
 export const Box = styled.div<BoxProps>(

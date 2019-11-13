@@ -1,30 +1,63 @@
-import React, { useContext } from 'react';
 import styled, { ThemeContext, css } from 'styled-components';
-import { compose, background, buttonStyle, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography, border, shadow, style } from 'styled-system';
+import { compose, background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography, variant, border, shadow, style } from 'styled-system';
+import React, { useContext } from 'react';
 
-var BoxDocz = function BoxDocz() {
-  return React.createElement("div", null);
-};
 var boxStyles =
 /*#__PURE__*/
-compose(background, buttonStyle, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography);
+compose(background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography,
+/*#__PURE__*/
+variant({
+  prop: 'variant',
+  scale: 'buttons',
+  variants: {
+    primary: {}
+  }
+}));
 var Box =
 /*#__PURE__*/
-styled.div.withConfig({
-  displayName: "Box",
-  componentId: "sc-1gug8g6-0"
-})({
+styled.div({
   boxSizing: 'border-box'
 }, boxStyles);
 
 var Card =
 /*#__PURE__*/
-styled(Box).withConfig({
-  displayName: "Card",
-  componentId: "m4kmxe-0"
-})(
+styled(Box)(
 /*#__PURE__*/
 compose(border, shadow));
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 function transformValue(n) {
   if (!n || isNaN(n)) {
@@ -51,10 +84,9 @@ style({
 });
 var Column =
 /*#__PURE__*/
-styled(Box).withConfig({
-  displayName: "Column",
-  componentId: "sc-1a1q09k-0"
-})(["", " ", ""], col, inset);
+styled(Box)(
+/*#__PURE__*/
+_templateObject(), col, inset);
 
 var Contain = function Contain(props) {
   var themeContext = useContext(ThemeContext);
@@ -70,23 +102,25 @@ var FlexDocz = function FlexDocz() {
 };
 var Flex =
 /*#__PURE__*/
-styled(Box).withConfig({
-  displayName: "Flex",
-  componentId: "cxd7w0-0"
-})({});
+styled(Box)({});
 Flex.defaultProps = {
   display: 'flex'
 };
 
-var TextDocz = function TextDocz() {
-  return React.createElement("div", null);
-};
+function _templateObject$1() {
+  var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
+
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 var Text =
 /*#__PURE__*/
-styled(Box).withConfig({
-  displayName: "Text",
-  componentId: "sc-1avl9pw-0"
-})(["", ""], function (props) {
+styled(Box)(
+/*#__PURE__*/
+_templateObject$1(), function (props) {
   return props.singleLine && css(["max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"]);
 });
 Text.defaultProps = {
@@ -95,28 +129,10 @@ Text.defaultProps = {
 
 var Heading =
 /*#__PURE__*/
-styled(Text).withConfig({
-  displayName: "Heading",
-  componentId: "sc-1vv0hjt-0"
-})({});
+styled(Text)({});
 Heading.defaultProps = {
   as: 'h2'
 };
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
 
 var classnames = function classnames() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
@@ -142,10 +158,7 @@ var StyledChildren = function StyledChildren(_ref) {
 };
 var Space =
 /*#__PURE__*/
-styled(StyledChildren).withConfig({
-  displayName: "Space",
-  componentId: "aw4q1b-0"
-})(space);
+styled(StyledChildren)(space);
 
 var Row = function Row(_ref) {
   var gutter = _ref.gutter,
@@ -185,5 +198,5 @@ var defaultGrid = {
   }
 };
 
-export { Box, BoxDocz, Card, Column, Contain, Flex, FlexDocz, Heading, Row, Space, StyledChildren, Text, TextDocz, defaultGrid };
+export { Box, Card, Column, Contain, Flex, FlexDocz, Heading, Row, Space, StyledChildren, Text, defaultGrid };
 //# sourceMappingURL=styled-primitives.esm.js.map
