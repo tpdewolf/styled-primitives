@@ -1,4 +1,4 @@
-import React, { FC, useContext } from 'react'
+import * as React from 'react'
 import { ThemeContext } from 'styled-components'
 import { SpaceProps, WidthProps, FlexboxProps } from 'styled-system'
 
@@ -11,11 +11,11 @@ interface GutterProps {
 
 type RowProps = FlexboxProps & GutterProps & SpaceProps & WidthProps
 
-export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
-  const themeContext = useContext(ThemeContext)
+export const Row: React.FC<RowProps> = ({ gutter, children, ...props }) => {
+  const themeContext = React.useContext(ThemeContext)
 
   if (!gutter && themeContext && themeContext.grid) {
-    gutter = themeContext.grid.gutter
+    gutter = themeContext.grid.gutter as number
   }
 
   if (!gutter) {
@@ -25,12 +25,12 @@ export const Row: FC<RowProps> = ({ gutter, children, ...props }) => {
   const spacing =
     gutter && Array.isArray(gutter)
       ? gutter.map(space => space && space / 2)
-      : gutter / 2
+      : (gutter as number) / 2
 
   const mx =
     gutter && Array.isArray(gutter)
       ? gutter.map(space => space && (space / 2) * -1)
-      : (gutter / 2) * -1
+      : ((gutter as number) / 2) * -1
 
   // const filteredChildren = React.Children.toArray(children).filter(Boolean)
 

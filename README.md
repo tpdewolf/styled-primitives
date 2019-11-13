@@ -8,7 +8,7 @@ Your styled components theme needs a `breakpoints` and a `grid` property:
 
 ```ts
 export const theme: DefaultTheme = {
-  breakpoints: ["40em", "52em", "64em", "80em"],
+  breakpoints: ['40em', '52em', '64em', '80em'],
   grid: {
     gutter: [15, null, 30], // responsive styles based on your breakpoints
     container: {
@@ -16,7 +16,7 @@ export const theme: DefaultTheme = {
       padding: [15, null, 30],
     },
   },
-};
+}
 ```
 
 ## Usage

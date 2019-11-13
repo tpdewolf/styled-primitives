@@ -1,6 +1,6 @@
 import styled, { ThemeContext, css } from 'styled-components';
 import { compose, background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography, variant, border, shadow, style } from 'styled-system';
-import React, { useContext } from 'react';
+import { useContext, createElement, Children, cloneElement, Fragment } from 'react';
 
 var boxStyles =
 /*#__PURE__*/
@@ -90,7 +90,7 @@ _templateObject(), col, inset);
 
 var Contain = function Contain(props) {
   var themeContext = useContext(ThemeContext);
-  return React.createElement(Box, Object.assign({
+  return createElement(Box, Object.assign({
     mx: "auto",
     px: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.padding,
     maxWidth: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.maxWidth
@@ -98,7 +98,7 @@ var Contain = function Contain(props) {
 };
 
 var FlexDocz = function FlexDocz() {
-  return React.createElement("div", null);
+  return createElement("div", null);
 };
 var Flex =
 /*#__PURE__*/
@@ -106,6 +106,16 @@ styled(Box)({});
 Flex.defaultProps = {
   display: 'flex'
 };
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject$1() {
   var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
@@ -121,7 +131,7 @@ var Text =
 styled(Box)(
 /*#__PURE__*/
 _templateObject$1(), function (props) {
-  return props.singleLine && css(["max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"]);
+  return props.singleLine && css(_templateObject2());
 });
 Text.defaultProps = {
   as: 'span'
@@ -149,12 +159,12 @@ var getClassName = function getClassName(el) {
 var StyledChildren = function StyledChildren(_ref) {
   var className = _ref.className,
       children = _ref.children;
-  var styledChildren = React.Children.toArray(children).map(function (child) {
-    return React.cloneElement(child, {
+  var styledChildren = Children.toArray(children).map(function (child) {
+    return cloneElement(child, {
       className: classnames(getClassName(child), className)
     });
   });
-  return React.createElement(React.Fragment, null, styledChildren);
+  return createElement(Fragment, null, styledChildren);
 };
 var Space =
 /*#__PURE__*/
@@ -182,10 +192,10 @@ var Row = function Row(_ref) {
     return space && space / 2 * -1;
   }) : gutter / 2 * -1; // const filteredChildren = React.Children.toArray(children).filter(Boolean)
 
-  return React.createElement(Flex, Object.assign({
+  return createElement(Flex, Object.assign({
     mx: mx,
     flexWrap: "wrap"
-  }, props), React.createElement(Space, {
+  }, props), createElement(Space, {
     px: spacing
   }, children));
 };

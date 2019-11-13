@@ -6,7 +6,6 @@ var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
 var styledSystem = require('styled-system');
 var React = require('react');
-var React__default = _interopDefault(React);
 
 var boxStyles =
 /*#__PURE__*/
@@ -96,7 +95,7 @@ _templateObject(), col, inset);
 
 var Contain = function Contain(props) {
   var themeContext = React.useContext(styled.ThemeContext);
-  return React__default.createElement(Box, Object.assign({
+  return React.createElement(Box, Object.assign({
     mx: "auto",
     px: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.padding,
     maxWidth: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.maxWidth
@@ -104,7 +103,7 @@ var Contain = function Contain(props) {
 };
 
 var FlexDocz = function FlexDocz() {
-  return React__default.createElement("div", null);
+  return React.createElement("div", null);
 };
 var Flex =
 /*#__PURE__*/
@@ -112,6 +111,16 @@ styled__default(Box)({});
 Flex.defaultProps = {
   display: 'flex'
 };
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteralLoose(["\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject$1() {
   var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
@@ -127,7 +136,7 @@ var Text =
 styled__default(Box)(
 /*#__PURE__*/
 _templateObject$1(), function (props) {
-  return props.singleLine && styled.css(["max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"]);
+  return props.singleLine && styled.css(_templateObject2());
 });
 Text.defaultProps = {
   as: 'span'
@@ -155,12 +164,12 @@ var getClassName = function getClassName(el) {
 var StyledChildren = function StyledChildren(_ref) {
   var className = _ref.className,
       children = _ref.children;
-  var styledChildren = React__default.Children.toArray(children).map(function (child) {
-    return React__default.cloneElement(child, {
+  var styledChildren = React.Children.toArray(children).map(function (child) {
+    return React.cloneElement(child, {
       className: classnames(getClassName(child), className)
     });
   });
-  return React__default.createElement(React__default.Fragment, null, styledChildren);
+  return React.createElement(React.Fragment, null, styledChildren);
 };
 var Space =
 /*#__PURE__*/
@@ -188,10 +197,10 @@ var Row = function Row(_ref) {
     return space && space / 2 * -1;
   }) : gutter / 2 * -1; // const filteredChildren = React.Children.toArray(children).filter(Boolean)
 
-  return React__default.createElement(Flex, Object.assign({
+  return React.createElement(Flex, Object.assign({
     mx: mx,
     flexWrap: "wrap"
-  }, props), React__default.createElement(Space, {
+  }, props), React.createElement(Space, {
     px: spacing
   }, children));
 };

@@ -2,7 +2,7 @@ import { ThemeContext } from 'styled-components'
 import { DisplayProps, HeightProps } from 'styled-system'
 import { Box } from './Box'
 import { useContext } from 'react'
-import React from 'react'
+import * as React from 'react'
 
 type ContainProps = DisplayProps & HeightProps
 
