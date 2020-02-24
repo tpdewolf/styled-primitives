@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import { style } from 'styled-system'
-
+import { style, compose } from 'styled-system'
 import { Box, BoxProps } from './Box'
 
-type ColumnProps = Omit<BoxProps, 'width'> & {
+type ColumnProps = BoxProps & {
   col?: number | (number | null | string)[]
   inset?: number | (number | null | string)[]
 }
@@ -29,7 +28,6 @@ const col = style({
   transformValue,
 })
 
-export const Column = styled(Box)<ColumnProps>`
-  ${col}
-  ${inset}
-`
+export const Column = styled(Box)<Omit<ColumnProps, 'width'>>(
+  compose(col, inset)
+)

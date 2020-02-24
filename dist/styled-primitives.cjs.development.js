@@ -32,40 +32,6 @@ styled__default(Box)(
 /*#__PURE__*/
 styledSystem.compose(styledSystem.border, styledSystem.shadow));
 
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _taggedTemplateLiteralLoose(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0);
-  }
-
-  strings.raw = raw;
-  return strings;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteralLoose(["\n  ", "\n  ", "\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
 function transformValue(n) {
   if (!n || isNaN(n)) {
     return n;
@@ -93,7 +59,7 @@ var Column =
 /*#__PURE__*/
 styled__default(Box)(
 /*#__PURE__*/
-_templateObject(), col, inset);
+styledSystem.compose(col, inset));
 
 var Contain = function Contain(props) {
   var themeContext = React.useContext(styled.ThemeContext);
@@ -104,15 +70,36 @@ var Contain = function Contain(props) {
   }, props));
 };
 
-var FlexDocz = function FlexDocz() {
-  return React.createElement("div", null);
-};
 var Flex =
 /*#__PURE__*/
 styled__default(Box)({});
 Flex.defaultProps = {
   display: 'flex'
 };
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _taggedTemplateLiteralLoose(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  strings.raw = raw;
+  return strings;
+}
 
 function _templateObject2() {
   var data = _taggedTemplateLiteralLoose(["\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n    "]);
@@ -124,10 +111,10 @@ function _templateObject2() {
   return data;
 }
 
-function _templateObject$1() {
+function _templateObject() {
   var data = _taggedTemplateLiteralLoose(["\n  ", "\n"]);
 
-  _templateObject$1 = function _templateObject() {
+  _templateObject = function _templateObject() {
     return data;
   };
 
@@ -137,7 +124,7 @@ var Text =
 /*#__PURE__*/
 styled__default(Box)(
 /*#__PURE__*/
-_templateObject$1(), function (props) {
+_templateObject(), function (props) {
   return props.singleLine && styled.css(_templateObject2());
 });
 Text.defaultProps = {
@@ -220,7 +207,6 @@ exports.Card = Card;
 exports.Column = Column;
 exports.Contain = Contain;
 exports.Flex = Flex;
-exports.FlexDocz = FlexDocz;
 exports.Heading = Heading;
 exports.Row = Row;
 exports.Space = Space;
