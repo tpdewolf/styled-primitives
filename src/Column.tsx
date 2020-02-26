@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { style, compose } from 'styled-system'
 import { Box, BoxProps } from './Box'
+import * as React from 'react'
 
 type ColumnProps = BoxProps & {
   col?: number | (number | null | string)[]

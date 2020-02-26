@@ -1,10 +1,22 @@
 import styled, { ThemeContext, css } from 'styled-components';
-import { compose, background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography, variant, border, shadow, style } from 'styled-system';
+import { compose, background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography, variant, style, border, shadow } from 'styled-system';
 import { useContext, createElement, Children, cloneElement, Fragment } from 'react';
 
+var textDecoration =
+/*#__PURE__*/
+style({
+  prop: 'textDecoration',
+  cssProperty: 'textDecoration'
+});
+var textTransform =
+/*#__PURE__*/
+style({
+  prop: 'textTransform',
+  cssProperty: 'textTransform'
+});
 var boxStyles =
 /*#__PURE__*/
-compose(background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, typography,
+compose(background, color, colorStyle, flexbox, layout, opacity, position, space, textStyle, textDecoration, textTransform, typography,
 /*#__PURE__*/
 variant({
   prop: 'variant',
@@ -62,6 +74,7 @@ var Contain = function Contain(props) {
     maxWidth: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.maxWidth
   }, props));
 };
+var Grid = Contain;
 
 var Flex =
 /*#__PURE__*/
@@ -120,8 +133,14 @@ styled(Box)(
 _templateObject(), function (props) {
   return props.singleLine && css(_templateObject2());
 });
+var Paragraph =
+/*#__PURE__*/
+styled(Text)({});
 Text.defaultProps = {
   as: 'span'
+};
+Paragraph.defaultProps = {
+  as: 'p'
 };
 
 var Heading =
@@ -195,5 +214,5 @@ var defaultGrid = {
   }
 };
 
-export { Box, Card, Column, Contain, Flex, Heading, Row, Space, StyledChildren, Text, defaultGrid };
+export { Box, Card, Column, Contain, Flex, Grid, Heading, Paragraph, Row, Space, StyledChildren, Text, defaultGrid };
 //# sourceMappingURL=styled-primitives.esm.js.map

@@ -6,7 +6,7 @@ import { Contain } from '../src/Contain'
 import { Row } from '../src/Row'
 import { Column } from '../src/Column'
 import { Heading } from '../src/Heading'
-import { Text } from '../src/Text'
+import { Text, Paragraph } from '../src/Text'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './theme'
 
@@ -28,6 +28,7 @@ const App = () => {
               <Box bg="#ccc" p={10}>
                 <Heading>Hello</Heading>
                 <Text>Test</Text>
+                <Paragraph>This should be a paragraph</Paragraph>
               </Box>
             </Column>
           </Row>

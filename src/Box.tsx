@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import {
   background,
   BackgroundProps,
+  ButtonStyleProps,
   color,
   ColorProps,
+  colorStyle,
+  ColorStyleProps,
   compose,
   flexbox,
   FlexboxProps,
@@ -16,15 +19,16 @@ import {
   PositionProps,
   space,
   SpaceProps,
+  style,
+  textStyle,
+  TextStyleProps,
   typography,
   TypographyProps,
-  textStyle,
-  colorStyle,
-  TextStyleProps,
-  ColorStyleProps,
-  ButtonStyleProps,
   variant,
 } from 'styled-system'
+
+type TextDecorationOption = 'overline' | 'line-through' | 'underline'
+type TextTransformOption = 'uppercase' | 'lowercase' | 'capitalize'
 
 export type BoxProps = BackgroundProps &
   ButtonStyleProps &
@@ -36,8 +40,24 @@ export type BoxProps = BackgroundProps &
   PositionProps &
   SpaceProps &
   TextStyleProps &
-  TypographyProps &
-  HTMLAttributes<any>
+  TypographyProps & {
+    textDecoration?:
+      | TextDecorationOption
+      | (TextDecorationOption | null | string)[]
+    textTransform?:
+      | TextTransformOption
+      | (TextTransformOption | null | string)[]
+  } & HTMLAttributes<any>
+
+const textDecoration = style({
+  prop: 'textDecoration',
+  cssProperty: 'textDecoration',
+})
+
+const textTransform = style({
+  prop: 'textTransform',
+  cssProperty: 'textTransform',
+})
 
 const boxStyles = compose(
   background,
@@ -49,6 +69,8 @@ const boxStyles = compose(
   position,
   space,
   textStyle,
+  textDecoration,
+  textTransform,
   typography,
   variant({
     prop: 'variant',

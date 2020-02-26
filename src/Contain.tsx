@@ -28,3 +28,5 @@ export const Contain: React.FC<ContainProps> = props => {
     />
   )
 }
+
+export const Grid = Contain

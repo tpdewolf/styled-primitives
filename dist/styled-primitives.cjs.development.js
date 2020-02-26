@@ -9,9 +9,21 @@ var styled__default = _interopDefault(styled);
 var styledSystem = require('styled-system');
 var React = require('react');
 
+var textDecoration =
+/*#__PURE__*/
+styledSystem.style({
+  prop: 'textDecoration',
+  cssProperty: 'textDecoration'
+});
+var textTransform =
+/*#__PURE__*/
+styledSystem.style({
+  prop: 'textTransform',
+  cssProperty: 'textTransform'
+});
 var boxStyles =
 /*#__PURE__*/
-styledSystem.compose(styledSystem.background, styledSystem.color, styledSystem.colorStyle, styledSystem.flexbox, styledSystem.layout, styledSystem.opacity, styledSystem.position, styledSystem.space, styledSystem.textStyle, styledSystem.typography,
+styledSystem.compose(styledSystem.background, styledSystem.color, styledSystem.colorStyle, styledSystem.flexbox, styledSystem.layout, styledSystem.opacity, styledSystem.position, styledSystem.space, styledSystem.textStyle, textDecoration, textTransform, styledSystem.typography,
 /*#__PURE__*/
 styledSystem.variant({
   prop: 'variant',
@@ -69,6 +81,7 @@ var Contain = function Contain(props) {
     maxWidth: themeContext && themeContext.grid && themeContext.grid.container && themeContext.grid.container.maxWidth
   }, props));
 };
+var Grid = Contain;
 
 var Flex =
 /*#__PURE__*/
@@ -127,8 +140,14 @@ styled__default(Box)(
 _templateObject(), function (props) {
   return props.singleLine && styled.css(_templateObject2());
 });
+var Paragraph =
+/*#__PURE__*/
+styled__default(Text)({});
 Text.defaultProps = {
   as: 'span'
+};
+Paragraph.defaultProps = {
+  as: 'p'
 };
 
 var Heading =
@@ -207,7 +226,9 @@ exports.Card = Card;
 exports.Column = Column;
 exports.Contain = Contain;
 exports.Flex = Flex;
+exports.Grid = Grid;
 exports.Heading = Heading;
+exports.Paragraph = Paragraph;
 exports.Row = Row;
 exports.Space = Space;
 exports.StyledChildren = StyledChildren;
