@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ThemeContext } from 'styled-components'
+import { useTheme } from 'styled-components'
 import { SpaceProps, WidthProps, FlexboxProps } from 'styled-system'
 
 import { Flex } from './Flex'
@@ -12,10 +12,10 @@ interface GutterProps {
 type RowProps = FlexboxProps & GutterProps & SpaceProps & WidthProps
 
 export const Row: React.FC<RowProps> = ({ gutter, children, ...props }) => {
-  const themeContext = React.useContext(ThemeContext)
+  const themeContext = useTheme()
 
   if (!gutter && themeContext && themeContext.grid) {
-    gutter = themeContext.grid.gutter as number
+    gutter = themeContext.grid.gutter
   }
 
   if (!gutter) {
@@ -32,11 +32,11 @@ export const Row: React.FC<RowProps> = ({ gutter, children, ...props }) => {
       ? gutter.map(space => space && (space / 2) * -1)
       : ((gutter as number) / 2) * -1
 
-  // const filteredChildren = React.Children.toArray(children).filter(Boolean)
-
   return (
     <Flex mx={mx} flexWrap="wrap" {...props}>
       <Space px={spacing}>{children}</Space>
     </Flex>
   )
 }
+
+Row.displayName = 'Row'

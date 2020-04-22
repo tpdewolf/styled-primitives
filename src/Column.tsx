@@ -28,6 +28,6 @@ const col = style({
   transformValue,
 })
 
-export const Column = styled(Box)<Omit<ColumnProps, 'width'>>(
-  compose(col, inset)
-)
+export const Column = styled(Box)<ColumnProps>(compose(col, inset))
+
+Column.displayName = 'Column'

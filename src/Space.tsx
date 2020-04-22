@@ -9,12 +9,17 @@ export const StyledChildren: React.FC<{ className?: string } & SpaceProps> = ({
   className,
   children,
 }) => {
-  const styledChildren = React.Children.toArray(children).map((child: any) =>
-    React.cloneElement(child, {
-      className: classnames(getClassName(child), className),
-    })
-  )
+  const styledChildren = React.Children.toArray(children)
+    .filter(React.isValidElement)
+    .map((child: any) =>
+      React.cloneElement(child, {
+        className: classnames(getClassName(child), className),
+      })
+    )
+
   return <>{styledChildren}</>
 }
 
 export const Space = styled(StyledChildren)(space)
+
+Space.displayName = 'Space'
