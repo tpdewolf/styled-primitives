@@ -1,34 +1,35 @@
 import 'react-app-polyfill/ie11'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Box } from '../src/Box'
-import { Contain } from '../src/Contain'
-import { Row } from '../src/Row'
-import { Column } from '../src/Column'
-import { Heading } from '../src/Heading'
-import { Text, Paragraph } from '../src/Text'
 import { ThemeProvider } from 'styled-components'
+import { Box } from '../src/Box'
+import { PseudoBox } from '../src/PseudoBox'
+import { Row } from '../src/Row'
+import { Grid } from '../src/Grid'
+import { Column } from '../src/Column'
 import { theme } from './theme'
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <Contain>
-          <Heading>Grid</Heading>
-          <Text textStyle="caps">Dit is een all caps ding</Text>
+        <Grid>
+          <Box as="h1">Grid</Box>
+          <Box as="p" textTransform="uppercase">
+            Dit is een all caps ding
+          </Box>
           <Row>
             <Column col={[12, 6]}>
-              <Box bg="#ccc" p={10}>
-                <Heading>Hello</Heading>
-                <Text>Test</Text>
-              </Box>
+              <PseudoBox bg="#ccc" p={10} _hover={{ bg: 'red' }}>
+                <Box as="h1">Hello</Box>
+                <Box as="p">Test</Box>
+              </PseudoBox>
             </Column>
             <Column col={[12, 6]}>
               <Box bg="#ccc" p={10}>
-                <Heading>Hello</Heading>
-                <Text>Test</Text>
-                <Paragraph>This should be a paragraph</Paragraph>
+                <Box as="h1">Hello</Box>
+                <Box as="span">Test</Box>
+                <Box as="p">This should be a paragraph</Box>
               </Box>
             </Column>
           </Row>
@@ -39,11 +40,7 @@ const App = () => {
             <Column>3</Column>
             <Column>4</Column>
           </Row>
-
-          <Box variant="primary" as="button">
-            dfgdfgf
-          </Box>
-        </Contain>
+        </Grid>
       </>
     </ThemeProvider>
   )

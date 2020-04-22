@@ -8,3 +8,5 @@ export const Flex = styled(Box)({})
 Flex.defaultProps = {
   display: 'flex',
 }
+
+Flex.displayName = 'Flex'
