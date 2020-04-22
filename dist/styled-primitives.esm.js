@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
 import { system, get, compose, layout, color, space, background, border, grid, position, shadow, typography, flexbox, style } from 'styled-system';
-import { Children, isValidElement, cloneElement, createElement, Fragment } from 'react';
+import { createElement, Children, isValidElement, cloneElement, Fragment } from 'react';
 import css from '@styled-system/css';
 
 function _extends() {
@@ -272,61 +272,6 @@ Flex.defaultProps = {
 };
 Flex.displayName = 'Flex';
 
-var classnames = function classnames() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  return args.join(' ');
-};
-
-var getClassName = function getClassName(el) {
-  return el.props && el.props.className || '';
-};
-
-var StyledChildren = function StyledChildren(_ref) {
-  var className = _ref.className,
-      children = _ref.children;
-  var styledChildren = Children.toArray(children).filter(isValidElement).map(function (child) {
-    return cloneElement(child, {
-      className: classnames(getClassName(child), className)
-    });
-  });
-  return createElement(Fragment, null, styledChildren);
-};
-var Space = /*#__PURE__*/styled(StyledChildren)(space);
-Space.displayName = 'Space';
-
-var Row = function Row(_ref) {
-  var gutter = _ref.gutter,
-      children = _ref.children,
-      props = _objectWithoutPropertiesLoose(_ref, ["gutter", "children"]);
-
-  var themeContext = useTheme();
-
-  if (!gutter && themeContext && themeContext.grid) {
-    gutter = themeContext.grid.gutter;
-  }
-
-  if (!gutter) {
-    gutter = 15;
-  }
-
-  var spacing = gutter && Array.isArray(gutter) ? gutter.map(function (space) {
-    return space && space / 2;
-  }) : gutter / 2;
-  var mx = gutter && Array.isArray(gutter) ? gutter.map(function (space) {
-    return space && space / 2 * -1;
-  }) : gutter / 2 * -1;
-  return createElement(Flex, Object.assign({
-    mx: mx,
-    flexWrap: "wrap"
-  }, props), createElement(Space, {
-    px: spacing
-  }, children));
-};
-Row.displayName = 'Row';
-
 var defaultGrid = {
   gutter: [15, null, 30],
   container: {
@@ -401,6 +346,61 @@ var PseudoBox = /*#__PURE__*/styled(Box)(function (_ref) {
   return css((_css = {}, _css[hover] = transformAliasProps(_hover), _css[focus] = transformAliasProps(_focus), _css[active] = transformAliasProps(_active), _css[visited] = transformAliasProps(_visited), _css[disabled] = transformAliasProps(_disabled), _css[selected] = transformAliasProps(_selected), _css[invalid] = transformAliasProps(_invalid), _css[expanded] = transformAliasProps(_expanded), _css[grabbed] = transformAliasProps(_grabbed), _css[readOnly] = transformAliasProps(_readOnly), _css[first] = transformAliasProps(_first), _css[notFirst] = transformAliasProps(_notFirst), _css[notLast] = transformAliasProps(_notLast), _css[last] = transformAliasProps(_last), _css[odd] = transformAliasProps(_odd), _css[even] = transformAliasProps(_even), _css[mixed] = transformAliasProps(_mixed), _css[checked] = transformAliasProps(_checked), _css[pressed] = transformAliasProps(_pressed), _css[groupHover] = transformAliasProps(_groupHover), _css['&:before'] = transformAliasProps(_before), _css['&:after'] = transformAliasProps(_after), _css['&:focus-within'] = transformAliasProps(_focusWithin), _css['&::placeholder'] = transformAliasProps(_placeholder), _css));
 });
 PseudoBox.displayName = 'PseudoBox';
+
+var classnames = function classnames() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return args.join(' ');
+};
+
+var getClassName = function getClassName(el) {
+  return el.props && el.props.className || '';
+};
+
+var StyledChildren = function StyledChildren(_ref) {
+  var className = _ref.className,
+      children = _ref.children;
+  var styledChildren = Children.toArray(children).filter(isValidElement).map(function (child) {
+    return cloneElement(child, {
+      className: classnames(getClassName(child), className)
+    });
+  });
+  return createElement(Fragment, null, styledChildren);
+};
+var Space = /*#__PURE__*/styled(StyledChildren)(space);
+Space.displayName = 'Space';
+
+var Row = function Row(_ref) {
+  var gutter = _ref.gutter,
+      children = _ref.children,
+      props = _objectWithoutPropertiesLoose(_ref, ["gutter", "children"]);
+
+  var themeContext = useTheme();
+
+  if (!gutter && themeContext && themeContext.grid) {
+    gutter = themeContext.grid.gutter;
+  }
+
+  if (!gutter) {
+    gutter = 15;
+  }
+
+  var spacing = gutter && Array.isArray(gutter) ? gutter.map(function (space) {
+    return space && space / 2;
+  }) : gutter / 2;
+  var mx = gutter && Array.isArray(gutter) ? gutter.map(function (space) {
+    return space && space / 2 * -1;
+  }) : gutter / 2 * -1;
+  return createElement(Flex, Object.assign({
+    mx: mx,
+    flexWrap: "wrap"
+  }, props), createElement(Space, {
+    px: spacing
+  }, children));
+};
+Row.displayName = 'Row';
 
 export { Box, Column, Flex, Grid, PseudoBox, Row, Space, StyledChildren, boxStyles, defaultGrid, truncate };
 //# sourceMappingURL=styled-primitives.esm.js.map
