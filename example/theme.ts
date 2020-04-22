@@ -17,11 +17,4 @@ export const theme: DefaultTheme = {
       letterSpacing: '0.1em',
     },
   },
-  // @ts-ignore
-  buttons: {
-    primary: {
-      bg: 'red',
-      height: 50,
-    },
-  },
 }
