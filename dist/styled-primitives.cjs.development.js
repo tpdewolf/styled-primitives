@@ -279,13 +279,6 @@ Flex.defaultProps = {
 };
 Flex.displayName = 'Flex';
 
-var defaultGrid = {
-  gutter: [15, null, 30],
-  container: {
-    maxWidth: 1280,
-    padding: [15, null, 60]
-  }
-};
 var Grid = function Grid(props) {
   var _themeContext$grid, _themeContext$grid$co, _themeContext$grid2, _themeContext$grid2$c;
 
@@ -418,6 +411,5 @@ exports.Row = Row;
 exports.Space = Space;
 exports.StyledChildren = StyledChildren;
 exports.boxStyles = boxStyles;
-exports.defaultGrid = defaultGrid;
 exports.truncate = truncate;
 //# sourceMappingURL=styled-primitives.cjs.development.js.map

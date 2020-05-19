@@ -272,13 +272,6 @@ Flex.defaultProps = {
 };
 Flex.displayName = 'Flex';
 
-var defaultGrid = {
-  gutter: [15, null, 30],
-  container: {
-    maxWidth: 1280,
-    padding: [15, null, 60]
-  }
-};
 var Grid = function Grid(props) {
   var _themeContext$grid, _themeContext$grid$co, _themeContext$grid2, _themeContext$grid2$c;
 
@@ -402,5 +395,5 @@ var Row = function Row(_ref) {
 };
 Row.displayName = 'Row';
 
-export { Box, Column, Flex, Grid, PseudoBox, Row, Space, StyledChildren, boxStyles, defaultGrid, truncate };
+export { Box, Column, Flex, Grid, PseudoBox, Row, Space, StyledChildren, boxStyles, truncate };
 //# sourceMappingURL=styled-primitives.esm.js.map

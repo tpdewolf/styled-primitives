@@ -49,6 +49,10 @@ type CSS = React.CSSProperties
 
 type borderRadius = BorderRadiusProps['borderRadius']
 type borderColor = BorderColorProps['borderColor']
+type FontSizes = keyof DefaultTheme['fontSizes']
+type FontWeights = keyof DefaultTheme['fontWeights']
+type LineHeights = keyof DefaultTheme['lineHeights']
+type LetterSpacings = keyof DefaultTheme['letterSpacings']
 
 export interface CustomConfig {
   // Custom borderRadius alias
@@ -141,25 +145,17 @@ export interface CustomConfig {
   borderRightWidth?: ResponsiveValue<CSS['borderRightWidth']>
 }
 
-type FontSizes = keyof DefaultTheme['fontSizes']
-
 export interface FontSize {
   fontSize?: ResponsiveValue<FontSizes> | FontSizeProps['fontSize']
 }
-
-type FontWeights = keyof DefaultTheme['fontWeights']
 
 export interface FontWeight {
   fontWeight?: ResponsiveValue<FontWeights> | FontWeightProps['fontWeight']
 }
 
-type LineHeights = keyof DefaultTheme['lineHeights']
-
 export interface LineHeight {
   lineHeight?: ResponsiveValue<LineHeights> | LineHeightProps['lineHeight']
 }
-
-type LetterSpacings = keyof DefaultTheme['letterSpacings']
 
 export interface LetterSpacing {
   letterSpacing?:
